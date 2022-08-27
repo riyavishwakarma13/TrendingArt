@@ -2235,6 +2235,7 @@ td {
   box-shadow: none;
 }
 
+
 .octf-btn-secondary {
   background: #00c3ff;
 }
@@ -5818,9 +5819,9 @@ div-container {
 }
 .service-box-s2 .number-box {
   float: left;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 37px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   color: #00c3ff;
   font-family: "Red Hat Display", sans-serif;
@@ -11582,6 +11583,14 @@ div.tp-bullets {
   line-height: 1;
   font-family: "Red Hat Display", sans-serif;
 }
+
+.stitle-default {
+  color: #1a1b1e;
+  font-weight: 600;
+  line-height: 2;
+  font-family: "Red Hat Display", sans-serif;
+}
+
 .icon-box.s2:before {
   background-color: rgba(0, 0, 0, 0);
   background-image: url(images/bg1-box.png);
@@ -12713,4 +12722,15 @@ div.tp-bullets {
     padding-left: 0 !important;
   }
 }
+
+a{
+  text-decoration: none !important;
+}
+
+.lol-margin > div {
+  margin-inline: 10px;
+  margin-block: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
+
