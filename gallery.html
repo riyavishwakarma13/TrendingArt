@@ -146,49 +146,52 @@
                   <div class="d-flex m-b10">
                     <div class="woocommerce-ordering m-l10 m-r10" method="get">
                       <select
-                        name="orderby"
+                        id="category"
+                        name="category"
                         class="orderby m-l10 m-r10"
                         aria-label="Shop order"
                       >
-                        <option value="menu_order" selected="selected">
-                          Household
-                        </option>
-                        <option value="society">Society</option>
-                        <option value="mandal">Mandal</option>
+                        <option value="" selected>Open this select menu</option>
+                        <option value="Household">Household</option>
+                        <option value="Society">Society</option>
+                        <option value="Mandal">Mandal</option>
                       </select>
                       <input type="hidden" name="paged" value="1" />
                     </div>
                     <div class="woocommerce-ordering m-r10" method="get">
                       <select
-                        name="orderby"
+                        id="city"
+                        name="city"
                         class="orderby m-l10 m-r10"
                         aria-label="Shop order"
                       >
-                        <option value="20" selected="selected">Mumbai</option>
-                        <option value="1">Thane</option>
-                        <option value="2">Navi Mumbai</option>
-                        <option value="3">Pune</option>
-                        <option value="4">Amravati</option>
-                        <option value="5">Nagpur</option>
-                        <option value="6">Akola</option>
-                        <option value="7">Jalgaon</option>
-                        <option value="8">Kolhapur</option>
-                        <option value="9">Chandrapur</option>
-                        <option value="10">Washim</option>
-                        <option value="11">Sangli</option>
-                        <option value="12">Hingoli</option>
-                        <option value="13">Ghadchiroli</option>
-                        <option value="14">Amravati</option>
-                        <option value="15">Latur</option>
-                        <option value="16">Palghar</option>
-                        <option value="17">Aurangabad</option>
-                        <option value="18">GOA</option>
-                        <option value="19">Nanded</option>
+                        <option value="" selected>Open this select menu</option>
+                        <option value="Thane">Thane</option>
+                        <option value="Navi Mumbai">Navi Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Amravati">Amravati</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Akola">Akola</option>
+                        <option value="Jalgaon">Jalgaon</option>
+                        <option value="Kolhapur">Kolhapur</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Washim">Washim</option>
+                        <option value="Sangli">Sangli</option>
+                        <option value="Hingoli">Hingoli</option>
+                        <option value="Ghadchiroli">Ghadchiroli</option>
+                        <option value="Amravati">Amravati</option>
+                        <option value="Latur">Latur</option>
+                        <option value="Palghar">Palghar</option>
+                        <option value="Aurangabad">Aurangabad</option>
+                        <option value="GOA">GOA</option>
+                        <option value="Nanded">Nanded</option>
+                        <option value="Chandrapur">Chandrapur</option>
                       </select>
                       <input type="hidden" name="paged" value="1" />
                     </div>
                     <div class="search-form flex-grow-1">
                       <input
+                        id="search"
                         type="search"
                         id="woocommerce-product-search-field-0"
                         class="search-field"
@@ -197,6 +200,7 @@
                         name="s"
                       />
                       <button
+                        id="submit-btn"
                         class="search-submit"
                         type="submit"
                         value="Search"
@@ -284,8 +288,6 @@
                       </div>
                       <h2 class="woocommerce-loop-product__title">
                         <a href="#">Ganpati</a>
-
-                        
                       </h2>
                     </li>
                     <li class="product">
@@ -514,5 +516,6 @@
     <script src="js/header-mobile.js"></script>
     <!-- <script src="js/royal_preloader.min.js"></script> -->
     <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="/js/gallery.js"></script>
   </body>
 </html>
