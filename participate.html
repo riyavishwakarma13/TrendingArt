@@ -148,11 +148,12 @@
                   <div class="ot-heading text-center text-light">
                     <h2 class="main-heading">Participation Form</h2>
                   </div>
-                  <form action="faq.php" method="POST" class="wpcf7-form">
+                  <form id="post-form" class="wpcf7-form">
                     <div class="faq-form row">
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-name">
                           <input
+                            id="name"
                             type="text"
                             name="name"
                             class="form-control"
@@ -164,14 +165,16 @@
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-url">
                           <select
+                            id="category"
+                            name="category"
                             class="form-select form-select-sm mb-3"
                             aria-label=".form-select-lg example"
                             style="border-radius: 1.5rem; padding-block: 10px"
                           >
                             <option selected="">Open this select menu</option>
-                            <option value="1">Household</option>
-                            <option value="2">Society</option>
-                            <option value="3">Mandal</option>
+                            <option value="Household">Household</option>
+                            <option value="Society">Society</option>
+                            <option value="Mandal">Mandal</option>
                           </select>
                           <input type="hidden" name="paged" value="1"
                         /></span>
@@ -179,31 +182,33 @@
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-url">
                           <select
+                            id="city"
+                            name="city"
                             class="form-select form-select-sm mb-3"
                             aria-label=".form-select-lg example"
                             style="border-radius: 1.5rem; padding-block: 10px"
                           >
                             <option selected="">Open this select menu</option>
-                            <option value="1">Thane</option>
-                            <option value="2">Navi Mumbai</option>
-                            <option value="3">Pune</option>
-                            <option value="4">Amravati</option>
-                            <option value="5">Nagpur</option>
-                            <option value="6">Akola</option>
-                            <option value="7">Jalgaon</option>
-                            <option value="8">Kolhapur</option>
-                            <option value="9">Mumbai</option>
-                            <option value="10">Washim</option>
-                            <option value="11">Sangli</option>
-                            <option value="12">Hingoli</option>
-                            <option value="13">Ghadchiroli</option>
-                            <option value="14">Amravati</option>
-                            <option value="15">Latur</option>
-                            <option value="16">Palghar</option>
-                            <option value="17">Aurangabad</option>
-                            <option value="18">GOA</option>
-                            <option value="19">Nanded</option>
-                            <option value="20">Chandrapur</option>
+                            <option value="Thane">Thane</option>
+                            <option value="Navi Mumbai">Navi Mumbai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Amravati">Amravati</option>
+                            <option value="Nagpur">Nagpur</option>
+                            <option value="Akola">Akola</option>
+                            <option value="Jalgaon">Jalgaon</option>
+                            <option value="Kolhapur">Kolhapur</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Washim">Washim</option>
+                            <option value="Sangli">Sangli</option>
+                            <option value="Hingoli">Hingoli</option>
+                            <option value="Ghadchiroli">Ghadchiroli</option>
+                            <option value="Amravati">Amravati</option>
+                            <option value="Latur">Latur</option>
+                            <option value="Palghar">Palghar</option>
+                            <option value="Aurangabad">Aurangabad</option>
+                            <option value="GOA">GOA</option>
+                            <option value="Nanded">Nanded</option>
+                            <option value="Chandrapur">Chandrapur</option>
                           </select>
                           <input type="hidden" name="paged" value="1" />
                         </span>
@@ -211,9 +216,10 @@
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-url">
                           <input
+                            id="file"
+                            name="file"
                             class="form-control"
                             type="file"
-                            id="formFile"
                             style="border-radius: 1.5rem; padding-block: 9px"
                           />
                         </span>
@@ -221,8 +227,9 @@
                       <p class="col-md-12 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-url">
                           <input
+                            id="display-name"
+                            name="display-name"
                             type="text"
-                            name="namedisplay"
                             class="form-control"
                             placeholder="Name to be displayed"
                           />
@@ -231,17 +238,20 @@
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-tel">
                           <input
-                            type="text"
-                            name="Contact"
+                            type="tel"
+                            name="phone"
+                            id="phone"
                             class="form-control"
                             placeholder="Your Contact Number *"
-                            required=""
+                            maxlength="10"
+                            required
                           />
                         </span>
                       </p>
                       <p class="col-md-6 col-xs-12">
                         <span class="wpcf7-form-control-wrap your-tel">
                           <button
+                            id="submit-btn"
                             type="submit"
                             class="octf-btn m-t10 octf-btn-icon octf-btn-primary"
                           >
@@ -249,27 +259,33 @@
                           </button>
                         </span>
                       </p>
-                      <p class="col-md-6 col-xs-12">
-                        <span class="wpcf7-form-control-wrap your-tel">
-                          <input
-                            type="text"
-                            name="Contact"
-                            class="form-control"
-                            placeholder="Enter your OTP *"
-                            required=""
-                          />
-                        </span>
-                      </p>
-                      <p class="col-md-6 col-xs-12">
-                        <span class="wpcf7-form-control-wrap your-tel">
-                          <button
-                            type="submit"
-                            class="octf-btn m-t10 octf-btn-icon octf-btn-primary"
-                          >
-                            Verify OTP<i class="flaticon-right-arrow-1"></i>
-                          </button>
-                        </span>
-                      </p>
+                      <div class="verify-otp-section d-flex gap-2 d-none">
+                        <p class="col-md-6 col-xs-12">
+                          <span class="wpcf7-form-control-wrap your-tel">
+                            <input
+                              id="otp"
+                              type="number"
+                              name="otp-code"
+                              class="form-control"
+                              placeholder="Enter your OTP *"
+                              minlength="6"
+                              maxlength="6"
+                              required
+                            />
+                          </span>
+                        </p>
+                        <p class="col-md-5 col-xs-12">
+                          <span class="wpcf7-form-control-wrap your-tel">
+                            <button
+                              id="otp-verify-btn"
+                              type="submit"
+                              class="octf-btn m-t10 octf-btn-icon octf-btn-primary"
+                            >
+                              Verify OTP<i class="flaticon-right-arrow-1"></i>
+                            </button>
+                          </span>
+                        </p>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -411,5 +427,6 @@
     <script src="js/header-mobile.js"></script>
     <!-- <script src="js/royal_preloader.min.js"></script> -->
     <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="/js/participate.js"></script>
   </body>
 </html>
