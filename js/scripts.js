@@ -241,6 +241,52 @@ $('.team-client-carousel').each( function () {
     });
 });
 
+/* --------------------------------------------------
+    *  our team
+    * --------------------------------------------------*/
+$('.cities-client-carousel').each( function () {
+    $(this).slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplaySpeed: 1000,
+        dots: false,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: false,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: false,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false
+                }
+            }
+        ]
+    });
+});
+
+
     /* --------------------------------------------------
     * message box
     * --------------------------------------------------*/
