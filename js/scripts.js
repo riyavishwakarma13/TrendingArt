@@ -206,6 +206,7 @@ $('.team-client-carousel').each( function () {
         arrows: false,
         autoplaySpeed: 1500,
         dots: false,
+        
         autoplay: true,
         responsive: [
             {
@@ -213,6 +214,7 @@ $('.team-client-carousel').each( function () {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
+                    spaceBetween:100,
                     infinite: true,
                     arrows: false,
                     dots: false
@@ -223,6 +225,8 @@ $('.team-client-carousel').each( function () {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
+                    spaceBetween:100,
+
                     infinite: true,
                     arrows: false,
                     dots: false
@@ -233,6 +237,7 @@ $('.team-client-carousel').each( function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    spaceBetween:100,
                     arrows: false,
                     dots: false
                 }
@@ -246,7 +251,7 @@ $('.team-client-carousel').each( function () {
     * --------------------------------------------------*/
 $('.cities-client-carousel').each( function () {
     $(this).slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         autoplaySpeed: 1000,

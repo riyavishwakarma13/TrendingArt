@@ -5034,8 +5034,8 @@ a:active {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 50px;
+  /* height: 100%; */
+  /* width: 50px; */
   outline: none;
   font-size: 26px;
   color: #a5b7d2;
@@ -5060,14 +5060,14 @@ a:active {
   -ms-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.search-form .search-submit i:before,
+/* .search-form .search-submit i:before,
 .search-form .search-submit i:after {
   font-size: 17px;
   font-weight: 700;
 }
 .search-form .search-submit i:hover {
   background: #00c3ff;
-}
+} */
 
 .widget .recent-news {
   padding-top: 5px;
@@ -5524,7 +5524,7 @@ object {
   display: block;
 }
 
-div-container{
+div-container {
   max-width: fit-content;
   min-width: none;
   margin: auto;
@@ -6328,7 +6328,7 @@ div-container{
   width: 100%;
 }
 
-.icon-colour{
+.icon-colour {
   background-color: 0073b1;
 }
 
@@ -8662,9 +8662,8 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .banner {
   position: relative;
 }
-.container-height{
+.container-height {
   min-height: 670px;
-
 }
 .banner .banner-wrap {
   min-height: 470px;
@@ -8840,7 +8839,7 @@ img {
   position: absolute;
 }
 
-.p-t400{
+.p-t400 {
   padding-top: 400px;
 }
 
@@ -8903,6 +8902,21 @@ img {
   color: #fff;
   background-color: #3b5998;
 }
+
+.slick-slider {
+  margin: 0 -15px;
+}
+.slick-slide {
+  /* padding:10px; */
+  /* background-color:red; */
+  text-align: center;
+  margin-inline: 10px;
+}
+.slick-slide.slick-active:first-child,
+.slick-slide.slick-active:last-child {
+  margin: 0;
+}
+
 .steam-social .instagram {
   background-color: #ff6828;
 }
@@ -8914,7 +8928,7 @@ img {
   background-color: #0160e7;
 }
 
- .team-social .linkedin {
+.team-social .linkedin {
   background-color: #0077b5;
 }
 
@@ -9199,7 +9213,6 @@ div.tp-bullets {
 }
 .home3-top .g-line {
   background-color: rgba(255, 255, 255, 0.2);
-
 }
 .home3-top .grid-lines .line-left span {
   top: 56%;
@@ -12422,9 +12435,8 @@ div.tp-bullets {
   .elementor .elementor-hidden-phone {
     display: none;
   }
-  .container-height{
+  .container-height {
     min-height: 450px;
-
   }
   .banner .banner-wrap {
     min-height: 250px;

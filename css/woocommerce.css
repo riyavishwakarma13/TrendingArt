@@ -29,7 +29,7 @@ WooCommerce styles override
 }
 .woocommerce .woocommerce-ordering,
 .woocommerce-page .woocommerce-ordering {
-  float: right;
+  float: left;
 }
 .woocommerce .woocommerce-ordering {
   border-radius: 23px;
