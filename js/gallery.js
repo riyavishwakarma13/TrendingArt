@@ -6,14 +6,17 @@ const renderPosts = (posts) => {
     str += `<li class="product">
         <div class="product-media">
           <img
+            class="gallery-image"
             src="${post.imageLink}"
             alt=""
           />
           <div class="wrapper-add-to-cart">
             <div class="add-to-cart-inner">
               <a
-                href="#"
                 id="${post._id}"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-post-id="${post._id}"
                 class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
                 >Vote <i class="fa-solid fa-thumbs-up"></i
               ></a>
@@ -21,7 +24,7 @@ const renderPosts = (posts) => {
           </div>
         </div>
         <h2 class="woocommerce-loop-product__title">
-          <a href="#">${post.displayName}</a>
+          <a href="/users.html#${post.phone}">${post.displayName}</a>
         </h2>
       </li>`;
   });
@@ -53,9 +56,14 @@ btn.addEventListener("click", async (e) => {
     params.append("name", name);
   }
 
+  const loading = document.getElementById("loading");
+  loading.classList.remove("d-none");
+
   const res = await fetch(`${apiUrl}/posts?${params.toString()}`).then((res) =>
     res.json()
   );
+
+  loading.classList.add("d-none");
 
   document.querySelector(".products").innerHTML = renderPosts(res);
 });
@@ -63,10 +71,16 @@ btn.addEventListener("click", async (e) => {
 const fetchPosts = async () => {
   const url = window.location.href;
   const params = new URL(url).searchParams.toString();
+  const loading = document.getElementById("loading");
+  loading.classList.remove("d-none");
   const res = await fetch(`${apiUrl}/posts?${params.toString()}`).then((res) =>
     res.json()
   );
+  loading.classList.add("d-none");
+
   document.querySelector(".products").innerHTML = renderPosts(res);
 };
+
+
 
 window.onload = fetchPosts;
