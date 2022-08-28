@@ -94,6 +94,13 @@
                       >
                     </div>
                   </div>
+                  <div class="octf-header-module">
+                    <div class="btn-cta-group btn-cta-header">
+                      <a class="octf-btn octf-btn-third" href="gallery.html"
+                        >Votes</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -320,7 +327,11 @@
                   <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                  <button id="copy-link-btn" type="button" class="btn btn-primary">
+                  <button
+                    id="copy-link-btn"
+                    type="button"
+                    class="btn btn-primary"
+                  >
                     Copy Link
                   </button>
                   <button
@@ -353,14 +364,13 @@
                     factors in play.
                   </p> -->
                   <div class="footer-social">
-                    
                     <a
                       class="footer-social-icon facebook"
                       href="#"
                       target="_blank"
                       ><i class="fab fa-facebook-f"></i
                     ></a>
-                     
+
                     <a
                       class="footer-social-icon instagram"
                       href="#"
@@ -434,10 +444,10 @@
 
     <script>
       const btn = document.getElementById("copy-link-btn");
-      btn.addEventListener("click", (e)=> {
+      btn.addEventListener("click", (e) => {
         const modaltext = document.getElementById("modal-body")?.value;
         navigator.clipboard.writeText(modaltext);
-      })
+      });
     </script>
   </body>
 </html>
