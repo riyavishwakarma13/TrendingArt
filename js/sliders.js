@@ -3,7 +3,7 @@ const $ = jQuery;
 const initTopClientCarousel = () => {
     $('#top-10').each( function () {
         $(this).slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             autoplaySpeed: 1500,
@@ -51,7 +51,7 @@ const initTopClientCarousel = () => {
 const initLatestClientCarousel = () => {
     $('#top-latest').each( function () {
         $(this).slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             autoplaySpeed: 1500,
