@@ -81,7 +81,7 @@ WooCommerce styles override
 }
 .woocommerce ul.products.columns-3 li.product,
 .woocommerce-page ul.products.columns-3 li.product {
-  width: 30.75%;
+  /* width: 30.75%; */
 }
 .woocommerce ul.products li.first,
 .woocommerce-page ul.products li.first {
@@ -93,7 +93,7 @@ WooCommerce styles override
   margin: 0 3.8% 2.992em 0;
   padding: 0;
   position: relative;
-  width: 22.05%;
+  /* width: 22.05%; */
   margin-left: 0;
 }
 .woocommerce ul.products li.last,
