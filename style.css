@@ -2220,6 +2220,11 @@ td {
 .octf-btn-primary {
   background: #fe4c1c;
 }
+
+.octf-btn-primary:disabled {
+  background: #86402d;
+}
+
 .octf-btn-primary.octf-btn {
   box-shadow: 12px 12px 20px 0px rgba(254, 76, 28, 0.3);
   -webkit-box-shadow: 12px 12px 20px 0px rgba(254, 76, 28, 0.3);
@@ -2234,7 +2239,6 @@ td {
 .octf-btn-primary:focus {
   box-shadow: none;
 }
-
 
 .octf-btn-secondary {
   background: #00c3ff;
@@ -2879,7 +2883,7 @@ a:active {
   width: 0%;
   bottom: -3px;
   left: 0;
-  background: #00c3ff;
+  background: #ff4b38;
   content: "";
   display: block;
   border-top-left-radius: 5px;
@@ -3238,7 +3242,7 @@ a:active {
 }
 .header-style-1.header-overlay .btn-cta-header a {
   color: #1a1b1e;
-  background: #00c3ff;
+  background: #fe4c1c;
   box-shadow: 8px 8px 20px 0px rgba(0, 139, 153, 0.3);
   -webkit-box-shadow: 8px 8px 20px 0px rgba(0, 139, 153, 0.3);
   -moz-box-shadow: 8px 8px 20px 0px rgba(0, 139, 153, 0.3);
@@ -5573,6 +5577,7 @@ div-container {
   border-radius: 50%;
   margin-right: 10px;
   text-align: center;
+  justify-content: center;
 }
 
 .footer-social-icon:last-child {
@@ -5641,7 +5646,7 @@ div-container {
 }
 
 .site-footer-2 .footer-widget h5 {
-  color: #fff;
+  color: rgb(12, 11, 11);
   font-family: "Red Hat Display", Sans-serif;
   font-size: 20px;
   margin-top: 20px;
@@ -5665,7 +5670,7 @@ div-container {
 
 .site-footer-2 .footer-contact-2 ul li strong {
   font-weight: 700;
-  color: #9ee8ff;
+  color: #0a0a0a;
 }
 
 .site-footer-2 .ft-menu-list li {
@@ -5689,8 +5694,9 @@ div-container {
 }
 
 .site-footer-2 .footer-bottom .copyright-2 {
-  color: #acebff;
+  color: #0a0a0a;
   font-size: 15px;
+  font-weight: 500;
   font-family: "Red Hat Text", sans-serif;
 }
 
@@ -5833,7 +5839,7 @@ div-container {
   background: rgba(0, 195, 255, 0.15);
 }
 .service-box-s2 .content-box {
-  padding-left: 70px;
+  padding-left: 10px;
 }
 .service-box-s2 .content-box h5 {
   font-weight: 700;
@@ -7951,7 +7957,13 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
   background-color: #0039e4;
   background-image: -moz-linear-gradient(90deg, #0039e4, #04dbf1);
   background-image: -webkit-linear-gradient(90deg, #0039e4, #04dbf1);
-  background-image: linear-gradient(90deg, #0039e4, #04dbf1);
+  /* background-image: background: rgb(254,76,28); */
+  background: linear-gradient(
+    90deg,
+    rgba(254, 76, 28, 1) 0%,
+    rgba(251, 34, 5, 1) 50%,
+    rgba(218, 35, 32, 1) 100%
+  );
   border-top-left-radius: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -9597,9 +9609,9 @@ div.tp-bullets {
   font-size: 25px;
   line-height: 60px;
 }
-.s-box .content-box {
+/* .s-box .content-box {
   padding-left: calc(40px + 50px);
-}
+} */
 .home4-about {
   background-image: url(images/shape1-home4.png);
   background-repeat: no-repeat;
@@ -11804,7 +11816,14 @@ div.tp-bullets {
   line-height: 40px;
 }
 .bg-gradient-2 {
-  background-image: linear-gradient(280deg, #04b6f1 0%, #002cae 62%);
+  color: rgb(8, 8, 8);
+  background: rgb(254, 76, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 76, 28, 1) 0%,
+    rgba(255, 89, 0, 1) 50%,
+    rgba(254, 80, 0, 1) 100%
+  );
 }
 .accordions-gradient .current {
   background-color: transparent;
@@ -11969,7 +11988,7 @@ div.tp-bullets {
 /* Back To Top*/
 #back-to-top {
   background: #fff;
-  color: #00c3ff;
+  color: #fe4c1c;
   border: 0 none;
   border-radius: 2px;
   cursor: pointer;
@@ -12723,7 +12742,7 @@ div.tp-bullets {
   }
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
@@ -12732,5 +12751,8 @@ a{
   margin-block: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.content-box > h5 {
+  padding-left: 2rem;
+}
 
+/*# sourceMappingURL=style.css.map */
