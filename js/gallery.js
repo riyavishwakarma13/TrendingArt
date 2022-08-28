@@ -1,7 +1,5 @@
 const btn = document.getElementById("submit-btn");
 
-const apiUrl = "http://localhost:3000/api";
-
 const renderPosts = (posts) => {
   let str = ``;
   posts.map((post) => {
