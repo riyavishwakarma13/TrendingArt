@@ -37,14 +37,14 @@ WooCommerce styles override
   -moz-border-radius: 23px;
   border: 1px solid #e6e6e6;
   padding: 0px 20px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .woocommerce .woocommerce-ordering .orderby {
   color: #7e7e7e;
   height: 50px;
   line-height: 50px;
   outline: none;
-  border: none;
+  /* border: none; */
 }
 
 .woocommerce ul.products li.product .star-rating {
@@ -81,7 +81,7 @@ WooCommerce styles override
 }
 .woocommerce ul.products.columns-3 li.product,
 .woocommerce-page ul.products.columns-3 li.product {
-  width: 30.75%;
+  /* width: 30.75%; */
 }
 .woocommerce ul.products li.first,
 .woocommerce-page ul.products li.first {
@@ -93,7 +93,7 @@ WooCommerce styles override
   margin: 0 3.8% 2.992em 0;
   padding: 0;
   position: relative;
-  width: 22.05%;
+  /* width: 22.05%; */
   margin-left: 0;
 }
 .woocommerce ul.products li.last,
@@ -1938,14 +1938,14 @@ WooCommerce styles override
     .woocommerce-page .woocommerce-ordering {
       float: left;
       margin-top: 10px;
-      border: none;
-      border-radius: 0;
+      /* border: none; */
+      /* border-radius: 0; */
       padding: 0;
       background: 0 0;
     }
     .woocommerce div .woocommerce-ordering .orderby {
       padding: 0;
-      border: none;
+      /* border: none; */
     }
     .woocommerce-page #content table.cart td.actions .coupon input.input-text,
     .woocommerce-page #content table.cart td.actions .coupon button.button {

@@ -34,8 +34,11 @@
         height: 200px;
         object-fit: contain;
       }
+      select {
+        background: transparent;
+        border: none !important;
+      }
     </style>
-
   </head>
 
   <body class="woocommerce">
@@ -89,14 +92,15 @@
                   <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
                       <a class="octf-btn octf-btn-third" href="participate.html"
-                        >Participate</a
+                        ><i class="fa fa-right-to-bracket text-white"></i>
+                        Participate</a
                       >
                     </div>
                   </div>
                   <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
                       <a class="octf-btn octf-btn-third" href="gallery.html"
-                        >Vote</a
+                        ><i class="fa fa-check-to-slot text-white"></i> Vote</a
                       >
                     </div>
                   </div>
@@ -142,6 +146,9 @@
                   <li>
                     <a href="participate.html">Participate</a>
                   </li>
+                  <li>
+                    <a href="gallery.html">Vote</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -159,12 +166,12 @@
                 class="content-area col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-right"
               >
                 <main id="main" class="site-main">
-                  <div class="d-flex m-b10">
-                    <div class="woocommerce-ordering m-l10 m-r10" method="get">
+                  <div class="d-flex m-b30 mx-2 gap-3">
+                    <div class="woocommerce-ordering" method="get">
                       <select
                         id="category"
                         name="category"
-                        class="orderby m-l10 m-r10"
+                        class="orderby"
                         aria-label="Shop order"
                       >
                         <option value="" selected>Open this select menu</option>
@@ -174,11 +181,11 @@
                       </select>
                       <input type="hidden" name="paged" value="1" />
                     </div>
-                    <div class="woocommerce-ordering m-r10" method="get">
+                    <div class="woocommerce-ordering" method="get">
                       <select
                         id="city"
                         name="city"
-                        class="orderby m-l10 m-r10"
+                        class="orderby"
                         aria-label="Shop order"
                       >
                         <option value="" selected>Open this select menu</option>
@@ -293,7 +300,11 @@
               >
                 Close
               </button>
-              <button id="modal-vote-btn" type="button" class="btn octf-btn octf-btn-third">
+              <button
+                id="modal-vote-btn"
+                type="button"
+                class="btn octf-btn octf-btn-third"
+              >
                 Vote
               </button>
             </div>
@@ -317,14 +328,13 @@
                     factors in play.
                   </p> -->
                   <div class="footer-social">
-                    
                     <a
                       class="footer-social-icon facebook"
                       href="#"
                       target="_blank"
                       ><i class="fab fa-facebook-f"></i
                     ></a>
-                     
+
                     <a
                       class="footer-social-icon instagram"
                       href="#"
@@ -340,8 +350,8 @@
                   <div class="footer-contact-2">
                     <ul class="font-second">
                       <li>
-                        <strong>Address:</strong> 411 University St,<br />Seattle,
-                        USA
+                        <strong>Address</strong> 11/1093, BHARAT NAGAR, Bandra
+                        East, Mumbai - 400051 (BKC)
                       </li>
                     </ul>
                   </div>
@@ -352,7 +362,7 @@
                   <h5></h5>
                   <ul class="ft-menu-list">
                     <li><strong>Email:</strong> info@optiminastic.com</li>
-                    <li><strong>Phone:</strong> +1 -800-456-478-23</li>
+                    <li><strong>Phone:</strong> +91 9022146771</li>
                   </ul>
                 </div>
               </div>
@@ -362,7 +372,7 @@
         <div class="footer-bottom">
           <div class="container">
             <p class="copyright-2 text-center">
-              Copyright © 2020 Onum by OceanThemes. All Rights Reserved.
+              Copyright © 2022 Reliance Trends. All rights reserved.
             </p>
           </div>
         </div>

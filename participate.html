@@ -10,9 +10,10 @@
     <title>Maha-utsav</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" type="image/x-icon" href="image/Asset 3.svg" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -90,14 +91,15 @@
                   <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
                       <a class="octf-btn octf-btn-third" href="participate.html"
-                        >Participate</a
+                        ><i class="fa fa-right-to-bracket text-white"></i>
+                        Participate</a
                       >
                     </div>
                   </div>
                   <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
                       <a class="octf-btn octf-btn-third" href="gallery.html"
-                        >Vote</a
+                        ><i class="fa fa-check-to-slot text-white"></i> Vote</a
                       >
                     </div>
                   </div>
@@ -143,6 +145,9 @@
                   <li>
                     <a href="participate.html">Participate</a>
                   </li>
+                  <li>
+                    <a href="gallery.html">Vote</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -183,10 +188,7 @@
                             aria-label=".form-select-lg example"
                             style="border-radius: 1.5rem; padding-block: 10px"
                           >
-                            <option value="" selected="">
-                              Open this select menu
-                            </option>
-                            <option value="Household">Household</option>
+                            <option value="Household" selected>Household</option>
                             <option value="Society">Society</option>
                             <option value="Mandal">Mandal</option>
                           </select>
@@ -202,9 +204,6 @@
                             aria-label=".form-select-lg example"
                             style="border-radius: 1.5rem; padding-block: 10px"
                           >
-                            <option value="" selected>
-                              Open this select menu
-                            </option>
                             <option value="Thane">Thane</option>
                             <option value="Navi Mumbai">Navi Mumbai</option>
                             <option value="Pune">Pune</option>
@@ -213,7 +212,7 @@
                             <option value="Akola">Akola</option>
                             <option value="Jalgaon">Jalgaon</option>
                             <option value="Kolhapur">Kolhapur</option>
-                            <option value="Mumbai">Mumbai</option>
+                            <option value="Mumbai" selected>Mumbai</option>
                             <option value="Washim">Washim</option>
                             <option value="Sangli">Sangli</option>
                             <option value="Hingoli">Hingoli</option>
@@ -310,6 +309,9 @@
           </div>
         </section>
         <!-- Error Modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responseModal">
+          Launch demo modal
+        </button> -->
         <div class="error-modal">
           <div class="modal" tabindex="-1" id="responseModal">
             <div class="modal-dialog">
@@ -327,7 +329,11 @@
                   <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">
+                  <button
+                    id="copy-link-btn"
+                    type="button"
+                    class="btn btn-primary"
+                  >
                     Copy Link
                   </button>
                   <button
@@ -360,14 +366,13 @@
                     factors in play.
                   </p> -->
                   <div class="footer-social">
-                    
                     <a
                       class="footer-social-icon facebook"
                       href="#"
                       target="_blank"
                       ><i class="fab fa-facebook-f"></i
                     ></a>
-                     
+
                     <a
                       class="footer-social-icon instagram"
                       href="#"
@@ -383,8 +388,8 @@
                   <div class="footer-contact-2">
                     <ul class="font-second">
                       <li>
-                        <strong>Address:</strong> 411 University St,<br />Seattle,
-                        USA
+                        <strong>Address</strong> 11/1093, BHARAT NAGAR, Bandra
+                        East, Mumbai - 400051 (BKC)
                       </li>
                     </ul>
                   </div>
@@ -395,7 +400,7 @@
                   <h5></h5>
                   <ul class="ft-menu-list">
                     <li><strong>Email:</strong> info@optiminastic.com</li>
-                    <li><strong>Phone:</strong> +1 -800-456-478-23</li>
+                    <li><strong>Phone:</strong> +91 9022146771</li>
                   </ul>
                 </div>
               </div>
@@ -405,7 +410,7 @@
         <div class="footer-bottom">
           <div class="container">
             <p class="copyright-2 text-center">
-              Copyright © 2020 Onum by OceanThemes. All Rights Reserved.
+              Copyright © 2022 Reliance Trends. All rights reserved.
             </p>
           </div>
         </div>
@@ -438,5 +443,13 @@
     <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
     <script src="/js/config.js"></script>
     <script src="/js/participate.js"></script>
+
+    <script>
+      const btn = document.getElementById("copy-link-btn");
+      btn.addEventListener("click", (e) => {
+        const modaltext = document.querySelector(".modal-body")?.innerText;
+        navigator.clipboard.writeText(modaltext);
+      });
+    </script>
   </body>
 </html>
