@@ -12811,4 +12811,9 @@ a {
   );
 }
 
+.margin-line{
+  border-top : #e9e4e4 1px solid;
+  padding-block: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
