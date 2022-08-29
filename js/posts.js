@@ -1,5 +1,5 @@
-const renderHTML = (post)=> {
-return ` 
+const renderHTML = (post) => {
+  return `
 <div class="container">
   <!-- <section class="about-home bg-light"> -->
   <!-- <div class="container"> -->
@@ -68,7 +68,7 @@ return `
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="service-box-s2 s-box service-box-s2-bg3">
-            <div class="content-box" style="word-break: break-word;">
+            <div class="content-box" style="word-break: break-word">
               <h5>Post Link: ${window.location.href}</h5>
             </div>
           </div>
@@ -77,11 +77,10 @@ return `
     </div>
   </section>
 </div>
-`
-}
+`;
+};
 
 const getPost = async () => {
-
   const id = new URL(window.location.href).searchParams.get("id");
 
   if (!id) {
@@ -95,10 +94,8 @@ const getPost = async () => {
   const res = await fetch(`${apiUrl}/posts/${id}`);
 
   if (res.ok) {
-   postDiv.innerHTML =   renderHTML(await res.json());
-  } 
-
+    postDiv.innerHTML = renderHTML(await res.json());
+  }
 };
-
 
 window.onload = getPost();

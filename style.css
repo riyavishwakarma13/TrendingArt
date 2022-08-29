@@ -8675,9 +8675,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .banner {
   position: relative;
 }
-.container-height {
+/* .container-height {
   min-height: 670px;
-}
+} */
 .banner .banner-wrap {
   min-height: 470px;
 }
@@ -12188,7 +12188,7 @@ div.tp-bullets {
     display: none !important;
   }
   .banner.big-padding-top {
-    padding: 100px 0 120px;
+    padding: 100px 0 80px;
   }
   .bg-about,
   .bg-pricing,
@@ -12464,9 +12464,9 @@ div.tp-bullets {
   .elementor .elementor-hidden-phone {
     display: none;
   }
-  .container-height {
+  /* .container-height {
     min-height: 450px;
-  }
+  } */
   .banner .banner-wrap {
     min-height: 250px;
   }
@@ -12771,23 +12771,44 @@ a {
   margin-block: 30px;
 }
 
-.yellow-bg{
-  background: rgb(255,168,58);
-  background: radial-gradient(circle, rgba(255,168,58,1) 19%, rgba(249,154,34,1) 48%, rgba(255,143,0,1) 99%); }
-
-.blue-bg{
-  background: rgb(43,130,255);
-  background: radial-gradient(circle, rgba(43,130,255,1) 19%, rgba(1,106,255,1) 48%, rgba(1,79,191,1) 88%); 
+.yellow-bg {
+  background: rgb(255, 168, 58);
+  background: radial-gradient(
+    circle,
+    rgba(255, 168, 58, 1) 19%,
+    rgba(249, 154, 34, 1) 48%,
+    rgba(255, 143, 0, 1) 99%
+  );
 }
 
-.orange-bg{
-  background: rgb(251,61,10);
-  background: radial-gradient(circle, rgba(251,61,10,1) 19%, rgba(242,77,33,1) 48%, rgba(200,45,3,1) 88%); 
+.blue-bg {
+  background: rgb(43, 130, 255);
+  background: radial-gradient(
+    circle,
+    rgba(43, 130, 255, 1) 19%,
+    rgba(1, 106, 255, 1) 48%,
+    rgba(1, 79, 191, 1) 88%
+  );
 }
 
-.lightblue-bg{
-  background: rgb(93,212,249);
-  background: radial-gradient(circle, rgba(93,212,249,1) 19%, rgba(56,209,255,1) 48%, rgba(0,195,255,1) 88%); 
+.orange-bg {
+  background: rgb(251, 61, 10);
+  background: radial-gradient(
+    circle,
+    rgba(251, 61, 10, 1) 19%,
+    rgba(242, 77, 33, 1) 48%,
+    rgba(200, 45, 3, 1) 88%
+  );
+}
+
+.lightblue-bg {
+  background: rgb(93, 212, 249);
+  background: radial-gradient(
+    circle,
+    rgba(93, 212, 249, 1) 19%,
+    rgba(56, 209, 255, 1) 48%,
+    rgba(0, 195, 255, 1) 88%
+  );
 }
 
 /*# sourceMappingURL=style.css.map */
