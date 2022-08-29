@@ -7,6 +7,7 @@ return `
     <img
       src="${post.imageLink}"
       alt="Ganpati"
+      style="width:95%; max-wdith: 95%;"
     />
   </div>
   <!-- </div> -->
@@ -29,7 +30,7 @@ return `
       </div>
     </div>
     <div class="container">
-      <div class="flex-row lol-margin justify-content-center">
+      <div class="flex-row lol-margin justify-content-start">
         <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
           <div class="service-box-s2 s-box service-box-s2-bg1">
             <div class="content-box">
