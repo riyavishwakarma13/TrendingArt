@@ -12772,10 +12772,8 @@ a {
 }
 
 .yellow-bg{
-  background: rgb(250,151,34);
-  background: linear-gradient(90deg, rgba(250,151,34,1) 19%, rgba(254,194,34,1) 38%, rgba(255,143,0,1) 88%); 
-
-}
+  background: rgb(255,168,58);
+  background: radial-gradient(circle, rgba(255,168,58,1) 19%, rgba(249,154,34,1) 48%, rgba(255,143,0,1) 99%); }
 
 .blue-bg{
   background: rgb(43,130,255);
