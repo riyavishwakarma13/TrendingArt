@@ -21,7 +21,7 @@ const renderHtml = (posts) => {
         />
       </div>
       <div class="team-info">
-      <a href="/users.html#${post.phone}">
+      <a href="/posts/?id=${post.id}">
         <h4>${post.displayName}</h4>
         </a>
       </div>

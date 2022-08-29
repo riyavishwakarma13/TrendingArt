@@ -17,10 +17,10 @@ return `
         <div class="wrapper-add-to-cart">
           <div class="add-to-cart-inner">
             <a
-              id="${post._id}"
+              id="${post.id}"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
-              data-bs-post-id="${post._id}"
+              data-bs-post-id="${post.id}"
               class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
               >Vote <i class="fa-solid fa-thumbs-up"></i
             ></a>
@@ -41,9 +41,6 @@ return `
           <div class="service-box-s2 s-box service-box-s2-bg2">
             <div class="content-box">
               <h5>Category: ${post.category}</h5>
-              <!-- <p>
-              We believe that a culture will build a thriving company.
-            </p> -->
             </div>
           </div>
         </div>
@@ -51,9 +48,6 @@ return `
           <div class="service-box-s2 s-box service-box-s2-bg2">
             <div class="content-box">
               <h5>City: ${post.city}</h5>
-              <!-- <p>
-                We believe that a culture will build a thriving company.
-              </p> -->
             </div>
           </div>
         </div>
@@ -61,9 +55,6 @@ return `
           <div class="service-box-s2 s-box service-box-s2-bg3">
             <div class="content-box">
               <h5>Displayed Name: ${post.displayName}</h5>
-              <!-- <p>
-              We’re driven to becoming the best version of ourselves.
-            </p> -->
             </div>
           </div>
         </div>
@@ -71,9 +62,6 @@ return `
           <div class="service-box-s2 s-box service-box-s2-bg3">
             <div class="content-box">
               <h5>Vote Count: ${post.votes}</h5>
-              <!-- <p>
-              We’re driven to becoming the best version of ourselves.
-            </p> -->
             </div>
           </div>
         </div>
@@ -81,9 +69,6 @@ return `
           <div class="service-box-s2 s-box service-box-s2-bg3">
             <div class="content-box" style="word-break: break-word;">
               <h5>Post Link: ${window.location.href}</h5>
-              <!-- <p>
-              We’re driven to becoming the best version of ourselves.
-            </p> -->
             </div>
           </div>
         </div>
@@ -95,21 +80,24 @@ return `
 }
 
 const getPost = async () => {
-  const number = window.location.hash.substring(1);
-  if (!number) return;
-  const res = await fetch(`${apiUrl}/posts/${number}`);
 
-  if (res.ok) {
-   document.getElementById("post-details").innerHTML =   renderHTML(await res.json());
-    // document.write(JSON.stringify(await res.json()));
-  } else {
+  const id = new URL(window.location.href).searchParams.get("id");
+
+  if (!id) {
     alert("Post not found");
     window.location.href = "/";
+    return;
   }
+
+  const postDiv = document.getElementById("post-details");
+
+  const res = await fetch(`${apiUrl}/posts/${id}`);
+
+  if (res.ok) {
+   postDiv.innerHTML =   renderHTML(await res.json());
+  } 
+
 };
 
-window.addEventListener("hashchange", async (e) => {
-  getPost();
-});
 
 window.onload = getPost();

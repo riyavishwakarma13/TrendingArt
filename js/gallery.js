@@ -16,10 +16,10 @@ const renderPosts = (posts) => {
           <div class="wrapper-add-to-cart">
             <div class="add-to-cart-inner">
               <a
-                id="${post._id}"
+                id="${post.id}"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                data-bs-post-id="${post._id}"
+                data-bs-post-id="${post.id}"
                 class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
                 >Vote <i class="fa-solid fa-thumbs-up"></i
               ></a>
@@ -27,7 +27,7 @@ const renderPosts = (posts) => {
           </div>
         </div>
         <h2 class="woocommerce-loop-product__title">
-          <a href="/users.html#${post.phone}">${post.displayName}</a>
+          <a href="/posts/?id=${post.id}">${post.displayName}</a>
         </h2>
       </li>`;
   });
