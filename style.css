@@ -11123,6 +11123,7 @@ div.tp-bullets {
   color: #0160e7;
   background-color: rgba(1, 96, 231, 0.152);
 }
+
 .number-box.s3 {
   color: #fe4c1c;
   background-color: rgba(254, 76, 28, 0.154);
@@ -12764,6 +12765,31 @@ a {
 .img-size > img {
   height: 70px;
   width: 190px;
+}
+
+.text-left > h4 {
+  margin-block: 30px;
+}
+
+.yellow-bg{
+  background: rgb(250,151,34);
+  background: linear-gradient(90deg, rgba(250,151,34,1) 19%, rgba(254,194,34,1) 38%, rgba(255,143,0,1) 88%); 
+
+}
+
+.blue-bg{
+  background: rgb(43,130,255);
+  background: radial-gradient(circle, rgba(43,130,255,1) 19%, rgba(1,106,255,1) 48%, rgba(1,79,191,1) 88%); 
+}
+
+.orange-bg{
+  background: rgb(251,61,10);
+  background: radial-gradient(circle, rgba(251,61,10,1) 19%, rgba(242,77,33,1) 48%, rgba(200,45,3,1) 88%); 
+}
+
+.lightblue-bg{
+  background: rgb(93,212,249);
+  background: radial-gradient(circle, rgba(93,212,249,1) 19%, rgba(56,209,255,1) 48%, rgba(0,195,255,1) 88%); 
 }
 
 /*# sourceMappingURL=style.css.map */
