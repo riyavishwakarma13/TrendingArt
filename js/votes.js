@@ -20,7 +20,11 @@ const vote = async (postId, email, phone) => {
   if (res.ok) {
     return {
       error: false,
-      message: "Vote added Successfully",
+      message: `Vote added Successfully <br /> <p>Congratulations !!!! </p>
+      <p> Your vote has been registered. </p>
+      
+      <p> You have been rewarded a Reliance Trends Voucher worth Rs 500/-
+     <strong> Redeemable at the nearest Reliance Trends Store </strong> </p>`,
     };
   } else {
     return {
