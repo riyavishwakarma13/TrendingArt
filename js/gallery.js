@@ -5,6 +5,9 @@ const renderPosts = (posts) => {
   posts.map((post) => {
     str += `<li class="product">
         <div class="product-media">
+        <div class="product last ">
+          <span class="onsale">${post.votes} Votes</span>
+        </div>
           <img
             class="gallery-image"
             src="${post.imageLink}"

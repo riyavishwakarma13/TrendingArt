@@ -12,6 +12,9 @@ const renderHtml = (posts) => {
     str += `<div class="partners-slide">
     <div class="team-wrap sm-p-t0 m-b15 p-t30">
       <div class="figure">
+      <div class="product last product-media">
+        <span class="onsale">${post.votes} Votes</span>
+      </div>
         <img
           class="Sirv image-main"
           data-src="${post.imageLink}"
@@ -26,13 +29,11 @@ const renderHtml = (posts) => {
   </div>`;
   });
 
-
   return str;
 };
 
 const top10 = document.getElementById("top-10");
 const topLatest = document.getElementById("top-latest");
-
 
 fetchTop10().then((posts) => {
   if (posts) {
