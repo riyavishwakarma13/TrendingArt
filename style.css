@@ -2060,9 +2060,9 @@ dd {
 }
 
 img {
-  height: auto;
+  /* height: auto; */
   /* Make sure images are scaled correctly. */
-  max-width: 100%;
+  /* max-width: 100%; */
   /* Adhere to container width. */
   object-fit: contain;
 }
@@ -2676,8 +2676,8 @@ a:active {
 ## Logo
 --------------------------------------------------------------*/
 #site-logo {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -2689,7 +2689,7 @@ a:active {
   line-height: 3;
 }
 #site-logo img {
-  width: 174px;
+  width: 134px;
 }
 #site-logo img.logo-static {
   display: block;
@@ -3330,7 +3330,7 @@ a:active {
   }
 }
 .is-stuck #site-logo {
-  padding: 15px 0px 15px 0px;
+  padding: 8px 0px 8px 0px;
 }
 
 .header-fullwidth .octf-area-wrap {
@@ -12753,6 +12753,17 @@ a {
 
 .content-box > h5 {
   padding-left: 2rem;
+}
+.riya {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
+
+.img-size > img {
+  height: 70px;
+  width: 190px;
 }
 
 /*# sourceMappingURL=style.css.map */
