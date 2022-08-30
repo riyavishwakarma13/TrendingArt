@@ -36,6 +36,25 @@
       height: 300px;
       object-fit: contain;
     }
+    .figure {
+      position: relative;
+      transition: all .9s;
+    }
+    .home-gallery {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: none;
+      
+    }
+    .figure:hover .home-gallery {
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      background-color: rgba(75, 73, 73, 0.8);
+    }
   </style>
 
   <body class="woocommerce">

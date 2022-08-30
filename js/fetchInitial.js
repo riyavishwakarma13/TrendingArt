@@ -18,9 +18,23 @@ const renderHtml = (posts) => {
                 <span class="onsale">${post.votes} Votes</span>
               </div>
               <img class="Sirv image-main" data-src="${post.imageLink}" />
+              <div class="wrapper-add-to-cart home-gallery">
+              <div class="add-to-cart-inner">
+                <a
+                  id="${post.id}"
+                  href="/posts/?id=${post.id}"
+                  class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
+                  >Click to Vote <i class="fa-solid fa-thumbs-up"></i
+                ></a>
+              </div>
             </div>
-            <div class="team-info">
+              </div>
+            <div class="team-info text-uppercase">
               <h4>${post.displayName}</h4>
+              <div class= "text-center text-muted">
+              <span>${post.city}, ${post.category}</span>
+              
+              </div>
             </div>
           </a>
         </div>

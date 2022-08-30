@@ -2276,7 +2276,7 @@ td {
 }
 
 .octf-btn-third {
-  background: #0160e7;
+  background: #FE4C1C;
 }
 .octf-btn-third.octf-btn {
   box-shadow: 12px 12px 20px 0px rgba(1, 96, 231, 0.3);
@@ -6311,7 +6311,7 @@ div-container {
 .team-wrap .team-info {
   background: #fff;
   margin: -0px 0px 0;
-  padding: 25px 25px 35px;
+  padding: 25px 25px 5px;
   position: relative;
   z-index: 1;
   border-radius: 15px;

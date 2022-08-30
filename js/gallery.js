@@ -34,7 +34,7 @@ const renderPosts = (posts) => {
             </div>
           </div>
         </div>
-        <h2 class="woocommerce-loop-product__title">
+        <h2 class="woocommerce-loop-product__title text-uppercase">
           <a href="/posts/?id=${post.id}">${post.displayName}</a>
         </h2>
       </li>`;
