@@ -68,11 +68,7 @@ const vote = async (postId, email, phone) => {
   if (res.ok) {
     return {
       error: false,
-      message: `Vote added Successfully <br /> <p>Congratulations !!!! </p>
-      <p> Your vote has been registered. </p>
-      
-      <p> You have been rewarded a Reliance Trends Voucher worth Rs 500/-
-     <strong> Redeemable at the nearest Reliance Trends Store </strong> </p>`,
+      message: `Congratulations! You have won a Rs 500 discount coupon from Trends. Please visit your nearest Trends store to collect your coupon`,
     };
   } else {
     return {
