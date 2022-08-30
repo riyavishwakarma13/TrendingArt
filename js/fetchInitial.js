@@ -9,24 +9,22 @@ const fetchLatest = async () => {
 const renderHtml = (posts) => {
   let str = ``;
   posts?.map((post) => {
-    str += `<div class="partners-slide">
-    <div class="team-wrap sm-p-t0 m-b15 p-t30">
-      <div class="figure">
-      <div class="product last product-media">
-        <span class="onsale">${post.votes} Votes</span>
-      </div>
-        <img
-          class="Sirv image-main"
-          data-src="${post.imageLink}"
-        />
-      </div>
-      <div class="team-info">
-      <a href="/posts/?id=${post.id}">
-        <h4>${post.displayName}</h4>
-        </a>
-      </div>
-    </div>
-  </div>`;
+    str += `
+      <div class="partners-slide">
+        <div class="team-wrap sm-p-t0 m-b15 p-t30">
+          <a href="/posts/?id=${post.id}">
+            <div class="figure">
+              <div class="product last product-media">
+                <span class="onsale">${post.votes} Votes</span>
+              </div>
+              <img class="Sirv image-main" data-src="${post.imageLink}" />
+            </div>
+            <div class="team-info">
+              <h4>${post.displayName}</h4>
+            </div>
+          </a>
+        </div>
+      </div>`;
   });
 
   return str;
@@ -49,8 +47,12 @@ fetchLatest().then((posts) => {
   }
 });
 
-const listings = document.querySelectorAll(".listings").forEach(async listing=> {
-  const id = listing.id;
-  const res = await fetch(`${apiUrl}/posts/count?city=${id}`).then(res=>res.json());
-  listing.innerHTML = `${res.data} Listings`
-})
+const listings = document
+  .querySelectorAll(".listings")
+  .forEach(async (listing) => {
+    const id = listing.id;
+    const res = await fetch(`${apiUrl}/posts/count?city=${id}`).then((res) =>
+      res.json()
+    );
+    listing.innerHTML = `${res.data} Listings`;
+  });
