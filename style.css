@@ -12188,7 +12188,7 @@ div.tp-bullets {
     display: none !important;
   }
   .banner.big-padding-top {
-    padding: 100px 0 80px;
+    padding: 100px 0 10px;
   }
   .bg-about,
   .bg-pricing,
@@ -12809,6 +12809,11 @@ a {
     rgba(56, 209, 255, 1) 48%,
     rgba(0, 195, 255, 1) 88%
   );
+}
+
+.margin-line{
+  border-top : #e9e4e4 1px solid;
+  padding-block: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
