@@ -212,7 +212,7 @@
                       </select>
                       <input type="hidden" name="paged" value="1" />
                     </div>
-                    <div class="search-form flex-grow-1">
+                    <form class="search-form flex-grow-1">
                       <input
                         id="search"
                         type="search"
@@ -230,21 +230,25 @@
                       >
                         <i class="flaticon-search"></i>
                       </button>
-                    </div>
+                    </form>
                   </div>
                   <ul class="products columns-3"></ul>
                 </main>
-                <div class="d-flex justify-content-center">
-                  <div
-                    id="loading"
-                    class="spinner-border text-primary d-none"
-                    role="status"
-                  >
-                    <span class="visually-hidden">Loading...</span>
-                  </div>
-                </div>
               </div>
             </div>
+            <div
+              class="d-flex justify-content-center align-items-center flex-column gap-3"
+            >
+              <div
+                id="loading"
+                class="spinner-border text-primary d-none"
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <button id="load-more" class="btn btn-primary">Load More</button>
+            </div>
+            <div></div>
           </div>
         </div>
       </div>

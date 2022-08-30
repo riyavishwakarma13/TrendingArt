@@ -1,4 +1,12 @@
 const btn = document.getElementById("submit-btn");
+const loadMoreBtn = document.getElementById("load-more");
+const cityElem = document.getElementById("city");
+const categoryElem = document.getElementById("category");
+
+let globalStart = 0;
+let globalCity = "";
+let globalCategory = "";
+let globalName = "";
 
 const renderPosts = (posts) => {
   let str = ``;
@@ -35,11 +43,40 @@ const renderPosts = (posts) => {
   return str;
 };
 
+cityElem.addEventListener("change", (e) => {
+  const city = cityElem.options[cityElem.selectedIndex].value;
+  const params = new URLSearchParams(window.location.search);
+
+  params.set("start", 0);
+
+  if (city) {
+    params.set("city", city);
+  } else {
+    params.delete("city");
+    params.delete("name");
+  }
+
+  window.location.search = params;
+});
+
+categoryElem.addEventListener("change", (e) => {
+  const category = categoryElem.options[categoryElem.selectedIndex].value;
+  const params = new URLSearchParams(window.location.search);
+
+  params.set("start", 0);
+
+  if (category) {
+    params.set("category", category);
+  } else {
+    params.delete("category");
+    params.delete("name");
+  }
+
+  window.location.search = params;
+});
+
 btn.addEventListener("click", async (e) => {
   e.preventDefault();
-
-  const cityElem = document.getElementById("city");
-  const categoryElem = document.getElementById("category");
   const search = document.getElementById("search");
   const start = 0;
   const city = cityElem.options[cityElem.selectedIndex].value;
@@ -59,31 +96,78 @@ btn.addEventListener("click", async (e) => {
     params.append("name", name);
   }
 
-  const loading = document.getElementById("loading");
-  loading.classList.remove("d-none");
-
-  const res = await fetch(`${apiUrl}/posts?${params.toString()}`).then((res) =>
-    res.json()
-  );
-
-  loading.classList.add("d-none");
-
-  document.querySelector(".products").innerHTML = renderPosts(res);
+  const posts = await fetchPosts(params);
+  document.querySelector(".products").innerHTML = renderPosts(posts);
+  window.location.search = params;
+  globalCity = city;
+  globalName = name;
+  globalCategory = category;
 });
 
-const fetchPosts = async () => {
-  const url = window.location.href;
-  const params = new URL(url).searchParams.toString();
+const fetchPosts = async (params) => {
   const loading = document.getElementById("loading");
+  loadMoreBtn.disabled = true;
   loading.classList.remove("d-none");
   const res = await fetch(`${apiUrl}/posts?${params.toString()}`).then((res) =>
     res.json()
   );
   loading.classList.add("d-none");
-
-  document.querySelector(".products").innerHTML = renderPosts(res);
+  loadMoreBtn.disabled = false;
+  return res;
 };
 
+window.addEventListener("load", async (e) => {
+  console.log("WooW");
+  const url = window.location.href;
+  const params = new URL(url).searchParams;
+  const posts = await fetchPosts(params);
 
+  document.querySelector(".products").innerHTML = renderPosts(posts);
+  globalCity = params.get("city");
+  globalName = params.get("name");
+  globalCategory = params.get("category");
+  const cityElem = document.getElementById("city");
+  const categoryElem = document.getElementById("category");
 
-window.onload = fetchPosts;
+  const categoryIndex = Array.from(categoryElem.options).findIndex(
+    (elem) => globalCategory === elem.value
+  );
+  const cityIndex = Array.from(cityElem.options).findIndex(
+    (elem) => globalCity === elem.value
+  );
+
+  if (categoryIndex >= 0) categoryElem.selectedIndex = categoryIndex;
+  if (cityIndex >= 0) cityElem.selectedIndex = cityIndex;
+});
+
+loadMoreBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  globalStart = parseInt(globalStart) + 10;
+
+  const loading = document.getElementById("loading");
+  loading.classList.remove("d-none");
+
+  const params = new URLSearchParams();
+
+  params.append("start", globalStart);
+
+  if (globalCity) {
+    params.append("city", globalCity);
+  }
+  if (globalCategory) {
+    params.append("category", globalCategory);
+  }
+
+  if (globalName) {
+    params.append("name", globalName);
+  }
+
+  const posts = await fetchPosts(params);
+
+  document.querySelector(".products").innerHTML += renderPosts(posts);
+
+  if (posts.length !== 10) {
+    loadMoreBtn.style.display = "none";
+  }
+});
