@@ -1,4 +1,51 @@
 let postId = "";
+const modal = `
+  <div
+    class="modal fade"
+    id="voucher-modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">
+        Your Voucher has been created
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+        <div class="modal-body mb-0 p-0">
+          <div class="d-flex justify-content-center my-3">
+            <img style="max-width: 95%" src="/images/voucher/1.jpg" />
+          </div>
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-rounded btn-md ml-4"
+          >
+          <a href="/images/voucher/1.jpg" download="voucher">Download Voucher</a>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-rounded btn-md ml-4"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
 
 const vote = async (postId, email, phone) => {
   const myHeaders = new Headers();
@@ -72,6 +119,19 @@ const handleVoteButtonClicked = async (e) => {
     return;
   } else {
     statusDiv.innerHTML = message;
+    const d = document.createElement("div");
+    d.innerHTML = modal;
+
+    document.body.appendChild(d);
+
+    var myModal = new bootstrap.Modal(
+      document.getElementById("voucher-modal"),
+      {
+        keyboard: false,
+      }
+    );
+
+    myModal.show();
   }
 };
 
