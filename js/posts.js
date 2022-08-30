@@ -105,6 +105,9 @@ const getPost = async () => {
   document
     .getElementById("display-image")
     .setAttribute("src", postData.imageLink);
+  document
+    .getElementById("user-vote-btn")
+    .setAttribute("data-bs-post-id", postData.id);
 };
 
 window.onload = getPost();
