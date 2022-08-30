@@ -1,4 +1,5 @@
 let postId = "";
+
 const vote = async (postId, email, phone) => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");

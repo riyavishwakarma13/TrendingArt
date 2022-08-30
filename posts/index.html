@@ -30,13 +30,48 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/idc.css" />
     <link rel="stylesheet" href="/css/woocommerce.css" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    /> -->
-    <!-- <link rel="stylesheet" href="css/royal-preload.css" /> -->
+
+    <style>
+      .image-caption {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .image-wrapper > img {
+        max-width: 95%;
+        max-height: 500px;
+        margin-bottom: 15px;
+        object-fit: contain;
+      }
+      .image-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .user-container {
+        margin-block: 90px;
+        padding: 2vw;
+        /* overflow: auto; */
+        box-sizing: border-box;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 10px #fe4c1c;
+        margin-inline: 2vw;
+      }
+      .title-default {
+        margin-block: 10px;
+      }
+      .m-block {
+        margin-block: 15px;
+      }
+      #user-link {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
   </head>
 
   <body class="woocommerce">
@@ -158,7 +193,64 @@
       </header>
 
       <div id="content" class="site-content">
-        <section id="post-details"></section>
+        <section class="user-container">
+          <div class="container">
+            <div class="image-wrapper">
+              <img id="display-image" alt="" />
+              <span id="display-name" class="title-default image-caption"
+                >Vishwakarma</span
+              >
+            </div>
+            <div class="mt-2">
+              <div
+                class="d-flex align-items-center gap-3 justify-content-center"
+              >
+                <a
+                  id="user-vote-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-bs-post-id="${post.id}"
+                  class="octf-btn octf-btn-primary octf-btn-icon"
+                  >Vote <i class="fa-solid fa-thumbs-up"></i
+                ></a>
+                <span
+                  id="vote-count"
+                  class="title-default"
+                  style="font-size: 20px; font-weight: 400"
+                  >69K</span
+                >
+              </div>
+              <div class="title-default mt-4">
+                <div class="row">
+                  <div class="col-md-6 m-block col-sm-12">
+                    Name:
+                    <span id="user-name">Cat++</span>
+                  </div>
+                  <div class="col-md-6 m-block col-sm-12">
+                    Category:
+                    <span id="user-category">Household</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 m-block col-sm-12">
+                    City:
+                    <span id="user-city">Mumbai+</span>
+                  </div>
+                  <div class="col-md-6 m-block col-sm-12" style="width: 250px">
+                    Link:
+                    <span id="user-link">Lol</span>
+                    <button
+                      class="btn btn-secondary my-3"
+                      onclick="navigator.clipboard.writeText(document.getElementById('user-link').innerText)"
+                    >
+                      copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div
         class="modal fade"

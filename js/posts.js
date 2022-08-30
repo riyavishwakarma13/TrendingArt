@@ -93,9 +93,18 @@ const getPost = async () => {
 
   const res = await fetch(`${apiUrl}/posts/${id}`);
 
-  if (res.ok) {
-    postDiv.innerHTML = renderHTML(await res.json());
-  }
+  if (!res.ok) return;
+
+  const postData = await res.json();
+  document.getElementById("display-name").innerHTML = postData.displayName;
+  document.getElementById("vote-count").innerHTML = `${postData.votes} Votes`;
+  document.getElementById("user-name").innerHTML = postData.name;
+  document.getElementById("user-category").innerHTML = postData.category;
+  document.getElementById("user-city").innerHTML = postData.city;
+  document.getElementById("user-link").innerHTML = window.location.href;
+  document
+    .getElementById("display-image")
+    .setAttribute("src", postData.imageLink);
 };
 
 window.onload = getPost();
