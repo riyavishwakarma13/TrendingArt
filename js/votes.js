@@ -76,7 +76,7 @@ const vote = async (postId, email, phone) => {
     };
   } else {
     return {
-      error: false,
+      error: true,
       message: (await res.json()).message,
     };
   }
