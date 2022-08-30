@@ -2689,7 +2689,7 @@ a:active {
   line-height: 3;
 }
 #site-logo img {
-  width: 134px;
+  width: 200px;
 }
 #site-logo img.logo-static {
   display: block;
@@ -2820,6 +2820,7 @@ a:active {
   position: relative;
   margin-top: 10px;
   margin-right: 10px;
+  height: 80px;
 }
 
 .text-right {
@@ -12763,8 +12764,8 @@ a {
 }
 
 .img-size > img {
-  height: 70px;
-  width: 190px;
+  /* height: 70px; */
+  width: 400px;
 }
 
 .text-left > h4 {
