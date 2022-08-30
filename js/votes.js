@@ -119,19 +119,19 @@ const handleVoteButtonClicked = async (e) => {
     return;
   } else {
     statusDiv.innerHTML = message;
-    const d = document.createElement("div");
-    d.innerHTML = modal;
+    // const d = document.createElement("div");
+    // d.innerHTML = modal;
 
-    document.body.appendChild(d);
+    // document.body.appendChild(d);
 
-    var myModal = new bootstrap.Modal(
-      document.getElementById("voucher-modal"),
-      {
-        keyboard: false,
-      }
-    );
+    // var myModal = new bootstrap.Modal(
+    //   document.getElementById("voucher-modal"),
+    //   {
+    //     keyboard: false,
+    //   }
+    // );
 
-    myModal.show();
+    // myModal.show();
   }
 };
 
