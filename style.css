@@ -1510,7 +1510,7 @@ section {
 }
 .m-t400
 {
-  margin-top: 400px;
+  margin-top: 515px;
 }
 
 .m-t0 {
@@ -8693,7 +8693,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   min-height: 470px;
 }
 .big-padding-top {
-  padding: 90px 0 0;
+  padding: 190px 0 0;
 }
 .bg-banner-gradient {
   background-color: transparent;
@@ -12199,7 +12199,7 @@ div.tp-bullets {
     display: none !important;
   }
   .banner.big-padding-top {
-    padding: 100px 0 10px;
+    padding: 150px 0 10px;
   }
   .bg-about,
   .bg-pricing,
