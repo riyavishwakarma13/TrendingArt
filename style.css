@@ -1502,6 +1502,16 @@ section {
 /*-------------------------------------
   marging (top)
 -------------------------------------*/
+.m-t200{
+  margin-top: 200px;
+}
+.m-t250{
+  margin-top: 250px;
+}
+.m-t400
+{
+  margin-top: 400px;
+}
 
 .m-t0 {
   margin-top: 0;
@@ -2689,7 +2699,7 @@ a:active {
   line-height: 3;
 }
 #site-logo img {
-  width: 270px;
+  width: 111px;
 }
 #site-logo img.logo-static {
   display: block;
@@ -3724,7 +3734,7 @@ a:active {
 @media only screen and (max-width: 320px) {
   .mobile_logo img {
     max-width: 230px;
-    max-height: 47px;
+    max-height: 105px;
   }
 }
 /*--------------------------------------------------------------
