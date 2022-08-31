@@ -65,8 +65,10 @@ const listings = document
   .querySelectorAll(".listings")
   .forEach(async (listing) => {
     const id = listing.id;
-    const res = await fetch(`${apiUrl}/posts/count?city=${id}`).then((res) =>
-      res.json()
-    );
-    listing.innerHTML = `${res.data} Listings`;
+    if (id) {
+      const res = await fetch(`${apiUrl}/posts/count?city=${id}`).then((res) =>
+        res.json()
+      );
+      listing.innerHTML = `${res.data} Listings`;
+    }
   });
