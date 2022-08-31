@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Maha-utsav</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/Asset 130.svg" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/image.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="idc.css" />
+    <link rel="stylesheet" href="css/woocommerce.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    /> -->
+    <!-- <link rel="stylesheet" href="css/royal-preload.css" /> -->
+  </head>
+  <style>
+    .image-caption {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .image-wrapper > img {
+      max-width: 95%;
+      max-height: 300px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+    .image-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .user-container {
+      margin-block: 90px;
+      padding: 2vw;
+      /* overflow: auto; */
+      box-sizing: border-box;
+      border-radius: 2vw;
+      box-shadow: 0px 0px 10px #fe4c1c;
+      margin-inline: 2vw;
+    }
+    .title-default {
+      margin-block: 10px;
+    }
+    .m-block {
+      margin-block: 15px;
+    }
+    .li-margin > li {
+      margin-block: 10px;
+      line-height: 1.5;
+    }
+  </style>
+  <body class="woocommerce">
+    <div id="page" class="site">
+      <header
+        id="site-header"
+        class="site-header header-style-1 header-overlay header-fullwidth sticky-header"
+      >
+        <!-- Main Header start -->
+        <div class="octf-main-header">
+          <div class="octf-area-wrap">
+            <div class="container-fluid octf-mainbar-container">
+              <div class="octf-mainbar">
+                <div class="octf-mainbar-row octf-row">
+                  <!-- logo start -->
+                  <div class="octf-col text-left">
+                    <div id="site-logo" class="site-logo">
+                      <a href="index.html">
+                        <img
+                          class="logo-static"
+                          src="/images/logos/logo.png"
+                          alt="Optiminastic"
+                        />
+                        <img
+                          class="logo-scroll"
+                          src="/images/logos/logo.png"
+                          alt="Optiminastic"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <!-- logo start -->
+                  <!-- nav start -->
+                  <div class="octf-col justify-content-end">
+                    <nav id="site-navigation" class="main-navigation">
+                      <ul id="primary-menu" class="menu">
+                        <li class="">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="">
+                          <a href="prizes.html">Cash Prizes</a>
+                        </li>
+
+                        <li class="">
+                          <a href="gallery.html">Gallery</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- #site-navigation -->
+                  </div>
+                  <div class="octf-header-module">
+                    <div class="btn-cta-group btn-cta-header">
+                      <a class="octf-btn octf-btn-third" href="participate.html"
+                        ><i class="fa fa-right-to-bracket text-white"></i>
+                        Participate</a
+                      >
+                    </div>
+                  </div>
+                  <div class="octf-header-module">
+                    <div class="btn-cta-group btn-cta-header">
+                      <a class="octf-btn octf-btn-third" href="gallery.html"
+                        ><i class="fa fa-check-to-slot text-white"></i> Vote</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header mobile -->
+        <div class="header_mobile">
+          <div class="container">
+            <div class="mlogo_wrapper clearfix">
+              <!-- logo mobile start -->
+              <div class="mobile_logo">
+                <a href="index.html"
+                  ><img
+                    src="/images/logos/logo.png"
+                    alt="Optiminastic Media"
+                    width="100px"
+                /></a>
+              </div>
+              <!-- logo mobile end -->
+
+              <div id="mmenu_toggle">
+                <button></button>
+              </div>
+            </div>
+
+            <!-- nav mobile start -->
+            <div class="mmenu_wrapper">
+              <div class="mobile_nav">
+                <ul id="menu-main-menu" class="mobile_mainmenu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="prizes.html">Cash Prizes</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="participate.html">Participate</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html">Vote</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- nav mobile end -->
+          </div>
+        </div>
+      </header>
+
+      <div id="content" class="site-content">
+        <section class="user-container m-t140">
+          <div class="container">
+            <div class="image-wrapper">
+              <span class="title-default image-caption"
+                >TERMS AND CONDITIONS</span
+              >
+              <img src="/images/logos/logo.png" alt="" />
+            </div>
+            <div class="mt-2">
+              <div class="title-default mt-4">
+                <div class="row">
+                  <div class="col-md-12 m-block col-sm-12">
+                    <ul class="li-margin">
+                      <li>
+                        Participants need to register themselves on:
+                        <a href="www.trendsganeshacontest.com"
+                          >trendsganesha.com</a
+                        >
+                      </li>
+                      <li>
+                        Each participant is permitted to submit only one entry.
+                      </li>
+                      <li>
+                        By submitting an entry, each entrant agrees to the
+                        contest rules and warrants that his/her entry complies
+                        with all requirements set out in the rules.
+                      </li>
+                      <li>Size of the file cannot exceed 5 MB.</li>
+                      <li>
+                        The format of the Image should be in Webp , PNG & JPEG
+                        only.
+                      </li>
+                      <li>
+                        We must receive your entries before _10 september 6 PM.
+                      </li>
+                      <li>
+                        Any entry including or depicting anything which is foul,
+                        objectionable, inappropriate or against public policy
+                        will not be permitted and it will lead to
+                        disqualification of the concerned individual or team.
+                      </li>
+                      <li>
+                        Organisers have full right to cancel any event due to
+                        unforeseen circumstances and are not liable to give any
+                        explanation for the same.
+                      </li>
+                      <li>
+                        The winners then will be decided purely on the basis of
+                        Votes & Background Verification.
+                      </li>
+                      <li>
+                        Lokmat Reserves all right for selection of Winners, no
+                        questions & queries will be answerable.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer id="site-footer" class="site-footer site-footer-2 bg-gradient-2">
+        <div class="main-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6">
+                <div class="footer-widget img-size">
+                  <img
+                    src="/images/logos/logo.png"
+                    class="attachment-full size-full m-b25"
+                    alt=""
+                  />
+                  <!-- <p class="m-b30">
+                    Our approach to SEO is uniquely built around what we know
+                    works…and what we know doesn’t work. With over 200 verified
+                    factors in play.
+                  </p> -->
+                  <div class="footer-social">
+                    <a
+                      class="footer-social-icon facebook"
+                      href="https://www.facebook.com/profile.php?id=100084975259552"
+                      target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+
+                    <a
+                      class="footer-social-icon instagram"
+                      href="https://instagram.com/trendsganesha?igshid=YmMyMTA2M2Y="
+                      target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="footer-widget">
+                  <h5>Contacts</h5>
+                  <div class="footer-contact-2">
+                    <ul class="font-second">
+                      <li>
+                        <strong>Address:</strong> 1301/2, Lodha Supremus Dr. E.
+                        Moses Rd, Worli Circle, Mumbai - 400 018
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="footer-widget">
+                  <h5></h5>
+                  <ul class="ft-menu-list">
+                    <li>
+                      <strong>Email: </strong
+                      ><a
+                        class="text-black"
+                        href="mailto:revathi.mudaliar@lokmat.com"
+                        >revathi.mudaliar@lokmat.com</a
+                      >
+                    </li>
+                    <li>
+                      <strong>Phone: </strong
+                      ><a class="text-black" href="tel:+91989-234-1158"
+                        >+91 9892341158</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-black" href="terms.html"
+                        ><strong>Terms and Conditions</strong></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="copyright-2 text-center">
+              Copyright © 2022 Lokmat. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- #site-footer -->
+    </div>
+    <!-- #page -->
+    <a id="back-to-top" href="#" class="show"
+      ><i class="flaticon-arrow-pointing-to-up"></i
+    ></a>
+    <!-- jQuery -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/header-mobile.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/users.js"></script>
+    <script src="/js/votes.js"></script>
+    <!-- <script src="js/royal_preloader.min.js"></script> -->
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+  </body>
+</html>
