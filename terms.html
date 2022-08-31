@@ -42,7 +42,7 @@
     }
     .image-wrapper > img {
       max-width: 95%;
-      max-height: 500px;
+      max-height: 300px;
       margin-bottom: 15px;
       object-fit: contain;
     }
@@ -67,6 +67,10 @@
     }
     .m-block {
       margin-block: 15px;
+    }
+    .li-margin > li {
+      margin-block: 10px;
+      line-height: 1.5;
     }
   </style>
   <body class="woocommerce">
@@ -186,196 +190,67 @@
       </header>
 
       <div id="content" class="site-content">
-        <section class="user-container">
+        <section class="user-container m-t140">
           <div class="container">
             <div class="image-wrapper">
-              <img src="/images/Web-Banner1.jpg" alt="" />
-              <span id="display-name" class="title-default image-caption"
-                >Vishwakarma</span
+              <span class="title-default image-caption"
+                >TERMS AND CONDITIONS</span
               >
+              <img src="/images/logos/logo.png" alt="" />
             </div>
             <div class="mt-2">
-              <div
-                class="d-flex align-items-center gap-3 justify-content-center"
-              >
-                <a
-                  id="user-vote-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                  data-bs-post-id="${post.id}"
-                  class="octf-btn octf-btn-primary octf-btn-icon"
-                  >Vote <i class="fa-solid fa-thumbs-up"></i
-                ></a>
-                <span
-                  id="vote-count"
-                  class="title-default"
-                  style="font-size: 20px; font-weight: 400"
-                  >69K</span
-                >
-              </div>
               <div class="title-default mt-4">
                 <div class="row">
-                  <div class="col-md-6 m-block col-sm-12">
-                    Name:
-                    <span id="user-name">Cat++</span>
-                  </div>
-                  <div class="col-md-6 m-block col-sm-12">
-                    Category:
-                    <span id="user-category">Household</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 m-block col-sm-12">
-                    City:
-                    <span id="user-city">Mumbai+</span>
-                  </div>
-                  <div class="col-md-6 m-block col-sm-12">
-                    Link:
-                    <span id="user-link">Lol</span>
+                  <div class="col-md-12 m-block col-sm-12">
+                    <ul class="li-margin">
+                      <li>
+                        Participants need to register themselves on:
+                        <a href="www.trendsganeshacontest.com"
+                          >trendsganesha.com</a
+                        >
+                      </li>
+                      <li>
+                        Each participant is permitted to submit only one entry.
+                      </li>
+                      <li>
+                        By submitting an entry, each entrant agrees to the
+                        contest rules and warrants that his/her entry complies
+                        with all requirements set out in the rules.
+                      </li>
+                      <li>Size of the file cannot exceed 5 MB.</li>
+                      <li>
+                        The format of the Image should be in Webp , PNG & JPEG
+                        only.
+                      </li>
+                      <li>
+                        We must receive your entries before _10 september 6 PM.
+                      </li>
+                      <li>
+                        Any entry including or depicting anything which is foul,
+                        objectionable, inappropriate or against public policy
+                        will not be permitted and it will lead to
+                        disqualification of the concerned individual or team.
+                      </li>
+                      <li>
+                        Organisers have full right to cancel any event due to
+                        unforeseen circumstances and are not liable to give any
+                        explanation for the same.
+                      </li>
+                      <li>
+                        The winners then will be decided purely on the basis of
+                        Votes & Background Verification.
+                      </li>
+                      <li>
+                        Lokmat Reserves all right for selection of Winners, no
+                        questions & queries will be answerable.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Please fill details for voting
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <div class="container">
-              <!-- <section class="about-home bg-light"> -->
-              <!-- <div class="container"> -->
-              <div class="m-tb100 text-center">
-                <img src="${post.imageLink}" alt="Ganpati" />
-              </div>
-              <!-- </div> -->
-              <!-- </section> -->
-              <section>
-                <div>
-                  <div class="row text-center p-b10">
-                    <div class="wrapper-add-to-cart">
-                      <div class="add-to-cart-inner">
-                        <a
-                          id="${post.id}"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                          data-bs-post-id="${post.id}"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
-                          >Vote <i class="fa-solid fa-thumbs-up"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container justify-content-start">
-                  <div class="flex-row lol-margin justify-content-center">
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg1">
-                        <div class="content-box">
-                          <h5>Name: ${post.name}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg2">
-                        <div class="content-box">
-                          <h5>Category: ${post.category}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg2">
-                        <div class="content-box">
-                          <h5>City: ${post.city}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box">
-                          <h5>Displayed Name: ${post.displayName}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box">
-                          <h5>Vote Count: ${post.votes}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box" style="word-break: break-word">
-                          <h5>Post Link: ${window.location.href}</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label"
-                    >Email</label
-                  >
-                  <input type="email" class="form-control" id="modal-email" />
-                </div>
-                <div class="mb-3">
-                  <label for="message-text" class="col-form-label"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="number"
-                    minlength="10"
-                    maxlength="10"
-                    class="form-control"
-                    id="modal-phone"
-                  />
-                </div>
-                <div class="modal-status text-center">lol</div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn octf-btn octf-btn-third"
-                data-bs-dismiss="modal"
-                style="margin-right: 10px"
-              >
-                Close
-              </button>
-              <button
-                id="modal-vote-btn"
-                type="button"
-                class="btn octf-btn octf-btn-third"
-              >
-                Vote
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
       <footer id="site-footer" class="site-footer site-footer-2 bg-gradient-2">
         <div class="main-footer">
