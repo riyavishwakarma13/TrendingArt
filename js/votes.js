@@ -136,6 +136,8 @@ voteModal.addEventListener("show.bs.modal", function (event) {
   const button = event.relatedTarget;
   postId = button.getAttribute("data-bs-post-id");
 
+  if (!postId) return;
+
   const voteButton = document.getElementById("modal-vote-btn");
   const statusDiv = document.querySelector(".modal-status");
   statusDiv.innerHTML = "";
