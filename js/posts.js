@@ -89,11 +89,14 @@ const getPost = async () => {
     return;
   }
 
-  const postDiv = document.getElementById("post-details");
 
   const res = await fetch(`${apiUrl}/posts/${id}`);
 
-  if (!res.ok) return;
+  if (!res.ok) {
+    alert("Post not found");
+    window.location.href = "/";
+    return;
+  };
 
   const postData = await res.json();
   document.getElementById("display-name").innerHTML = postData.displayName;
