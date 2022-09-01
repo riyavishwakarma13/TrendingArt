@@ -132,6 +132,7 @@ WooCommerce styles override
   margin-top: 20px;
   margin-bottom: 3px;
   padding: 0px;
+  width: 300px;
 }
 .woocommerce ul.products li.product .woocommerce-loop-product__title a,
 .woocommerce-page ul.products li.product .woocommerce-loop-product__title a {
