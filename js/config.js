@@ -1,1 +1,1 @@
-const apiUrl = "https://ganpati-campaign.herokuapp.com/api";
+// const apiUrl = "https://ganpati-campaign.herokuapp.com/api";
