@@ -1502,14 +1502,13 @@ section {
 /*-------------------------------------
   marging (top)
 -------------------------------------*/
-.m-t200{
+.m-t200 {
   margin-top: 200px;
 }
-.m-t250{
+.m-t250 {
   margin-top: 250px;
 }
-.m-t400
-{
+.m-t400 {
   margin-top: 515px;
 }
 
@@ -2286,7 +2285,7 @@ td {
 }
 
 .octf-btn-third {
-  background: #FE4C1C;
+  background: #fe4c1c;
 }
 .octf-btn-third.octf-btn {
   box-shadow: 12px 12px 20px 0px rgba(rgba(254, 76, 28, 0.3));
@@ -12822,9 +12821,16 @@ a {
   );
 }
 
-.margin-line{
-  border-top : #e9e4e4 1px solid;
+.margin-line {
+  border-top: #e9e4e4 1px solid;
   padding-block: 10px;
+}
+
+.shadow {
+  /* overflow: auto; */
+  box-sizing: border-box;
+  border-radius: 2vw;
+  box-shadow: 0px 0px 10px #fe4c1c;
 }
 
 /*# sourceMappingURL=style.css.map */
