@@ -89,15 +89,16 @@ const getPost = async () => {
     return;
   }
 
-
   const res = await fetch(`${apiUrl}/posts/${id}`);
 
   if (!res.ok) {
     alert("Post not found");
     window.location.href = "/";
     return;
-  };
+  }
+  const voteButton = document.getElementById("user-vote-btn");
 
+  voteButton.disabled = true;
   const postData = await res.json();
   document.getElementById("display-name").innerHTML = postData.displayName;
   document.getElementById("vote-count").innerHTML = `${postData.votes} Votes`;
@@ -108,9 +109,8 @@ const getPost = async () => {
   document
     .getElementById("display-image")
     .setAttribute("src", postData.imageLink);
-  document
-    .getElementById("user-vote-btn")
-    .setAttribute("data-bs-post-id", postData.id);
+  voteButton.setAttribute("data-bs-post-id", postData.id);
+  voteButton.disabled = false;
 };
 
 window.onload = getPost();

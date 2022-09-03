@@ -71,9 +71,14 @@ const vote = async (postId, email, phone) => {
       message: `Congratulations! You have won a Rs 500 discount coupon from Trends. Please visit your nearest Trends store to collect your coupon`,
     };
   } else {
+    const errRes = await res.json();
+    let msg = errRes.message;
+    if (errRes.message.toLowerCase() === "something went wrong") {
+      msg += " Refresh and try again";
+    }
     return {
       error: true,
-      message: (await res.json()).message,
+      message: msg,
     };
   }
 };
