@@ -111,29 +111,23 @@ const handleVoteButtonClicked = async (e) => {
     statusDiv.innerHTML = "Invalid Number";
     return;
   }
-  e.target.disabled = true;
-  const { error, message } = await vote(postId, email, phone);
-  e.target.disabled = false;
-  if (error) {
-    statusDiv.classList.add("modal-error");
-    statusDiv.innerHTML = message;
-    return;
-  } else {
-    statusDiv.innerHTML = message;
-    // const d = document.createElement("div");
-    // d.innerHTML = modal;
 
-    // document.body.appendChild(d);
-
-    // var myModal = new bootstrap.Modal(
-    //   document.getElementById("voucher-modal"),
-    //   {
-    //     keyboard: false,
-    //   }
-    // );
-
-    // myModal.show();
-  }
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute("6Ldw7NkhAAAAANEgcweMfeMuwu1h8DxxIeAfFXq_", { action: "submit" })
+      .then(async (token) => {
+        e.target.disabled = true;
+        const { error, message } = await vote(postId, email, phone);
+        e.target.disabled = false;
+        if (error) {
+          statusDiv.classList.add("modal-error");
+          statusDiv.innerHTML = message;
+          return;
+        } else {
+          statusDiv.innerHTML = message;
+        }
+      });
+  });
 };
 
 const voteModal = document.getElementById("exampleModal");
