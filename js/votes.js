@@ -47,7 +47,7 @@ const modal = `
   </div>
 `;
 
-const vote = async (postId, email, phone) => {
+const vote = async (postId, email, phone, token) => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -55,6 +55,7 @@ const vote = async (postId, email, phone) => {
     postId,
     email,
     phone,
+    token
   });
 
   const requestOptions = {
@@ -95,7 +96,7 @@ const handleVoteButtonClicked = async (e) => {
   const emailElem = document.getElementById("modal-email");
   const phoneElem = document.getElementById("modal-phone");
   const statusDiv = document.querySelector(".modal-status");
-
+  statusDiv.innerHTML = "";
   const email = emailElem.value;
 
   if (!ValidateEmail(email)) {
@@ -117,7 +118,7 @@ const handleVoteButtonClicked = async (e) => {
       .execute("6Ldw7NkhAAAAANEgcweMfeMuwu1h8DxxIeAfFXq_", { action: "submit" })
       .then(async (token) => {
         e.target.disabled = true;
-        const { error, message } = await vote(postId, email, phone);
+        const { error, message } = await vote(postId, email, phone, token);
         e.target.disabled = false;
         if (error) {
           statusDiv.classList.add("modal-error");
