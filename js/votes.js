@@ -64,7 +64,7 @@ const vote = async (postId, email, phone) => {
     redirect: "follow",
   };
 
-  const res = await fetch(`${apiUrl}/votes`, requestOptions);
+  const res = await fetch(`${apiUrl}/votes/${postId}`, requestOptions);
   if (res.ok) {
     return {
       error: false,
