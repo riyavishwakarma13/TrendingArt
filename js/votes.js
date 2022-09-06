@@ -52,6 +52,7 @@ const vote = async (postId, email, phone) => {
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
+    postId,
     email,
     phone,
   });
