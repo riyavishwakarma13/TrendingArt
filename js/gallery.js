@@ -21,7 +21,7 @@ const renderPosts = (posts) => {
             src="${post.imageLink}"
             alt=""
           />
-          <div class="wrapper-add-to-cart">
+          <!-- <div class="wrapper-add-to-cart">
             <div class="add-to-cart-inner">
               <a
                 id="${post.id}"
@@ -32,7 +32,7 @@ const renderPosts = (posts) => {
                 >Vote <i class="fa-solid fa-thumbs-up"></i
               ></a>
             </div>
-          </div>
+          </div> -->
         </div>
         <h2 class="woocommerce-loop-product__title text-uppercase">
           <a href="/posts/?id=${post.id}">${post.displayName}</a>
