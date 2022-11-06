@@ -15,60 +15,66 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="shortcut icon" type="image/x-icon" href="images/Asset 130.svg" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/image.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/slick-theme.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="idc.css" />
-    <link rel="stylesheet" href="css/woocommerce.css" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    /> -->
-    <!-- <link rel="stylesheet" href="css/royal-preload.css" /> -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/images/Asset 130.svg"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/image.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+    <link rel="stylesheet" href="/css/flaticon.css" />
+    <link rel="stylesheet" href="/css/slick.css" />
+    <link rel="stylesheet" href="/css/slick-theme.css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/idc.css" />
+    <link rel="stylesheet" href="/css/woocommerce.css" />
+
+    <style>
+      .image-caption {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .image-wrapper > img {
+        max-width: 95%;
+        max-height: 500px;
+        margin-bottom: 15px;
+        object-fit: contain;
+      }
+      .image-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .user-container {
+        margin-block: 150px;
+        padding: 2vw;
+        /* overflow: auto; */
+        box-sizing: border-box;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 10px #fe4c1c;
+        margin-inline: 2vw;
+      }
+      .title-default {
+        margin-block: 10px;
+      }
+      .m-block {
+        margin-block: 15px;
+      }
+      #user-link {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ldw7NkhAAAAANEgcweMfeMuwu1h8DxxIeAfFXq_"></script>
   </head>
-  <style>
-    .image-caption {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 25px;
-    }
-    .image-wrapper > img {
-      max-width: 95%;
-      max-height: 500px;
-      margin-bottom: 15px;
-      object-fit: contain;
-    }
-    .image-wrapper {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .user-container {
-      margin-block: 90px;
-      padding: 2vw;
-      /* overflow: auto; */
-      box-sizing: border-box;
-      border-radius: 2vw;
-      box-shadow: 0px 0px 10px #fe4c1c;
-      margin-inline: 2vw;
-    }
-    .title-default {
-      margin-block: 10px;
-    }
-    .m-block {
-      margin-block: 15px;
-    }
-  </style>
+
   <body class="woocommerce">
     <div id="page" class="site">
       <header
@@ -84,7 +90,7 @@
                   <!-- logo start -->
                   <div class="octf-col text-left">
                     <div id="site-logo" class="site-logo">
-                      <a href="index.html">
+                      <a href="/index.html">
                         <img
                           class="logo-static"
                           src="https://drive.google.com/uc?id=1I0w85Q0wYywTq-7BcG-nMlgc4BXBr652"
@@ -104,14 +110,14 @@
                     <nav id="site-navigation" class="main-navigation">
                       <ul id="primary-menu" class="menu">
                         <li class="">
-                          <a href="index.html">Home</a>
+                          <a href="/index.html">Home</a>
                         </li>
                         <li class="">
-                          <a href="prizes.html">Cash Prizes</a>
+                          <a href="/prizes.html">Cash Prizes</a>
                         </li>
 
                         <li class="">
-                          <a href="gallery.html">Gallery</a>
+                          <a href="/gallery.html">Gallery</a>
                         </li>
                       </ul>
                     </nav>
@@ -119,7 +125,9 @@
                   </div>
                   <!-- <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
-                      <a class="octf-btn octf-btn-third" href="participate.html"
+                      <a
+                        class="octf-btn octf-btn-third"
+                        href="/participate.html"
                         ><i class="fa fa-right-to-bracket text-white"></i>
                         Participate</a
                       >
@@ -127,7 +135,7 @@
                   </div>
                   <div class="octf-header-module">
                     <div class="btn-cta-group btn-cta-header">
-                      <a class="octf-btn octf-btn-third" href="gallery.html"
+                      <a class="octf-btn octf-btn-third" href="/gallery.html"
                         ><i class="fa fa-check-to-slot text-white"></i> Vote</a
                       >
                     </div>
@@ -144,11 +152,10 @@
             <div class="mlogo_wrapper clearfix">
               <!-- logo mobile start -->
               <div class="mobile_logo">
-                <a href="index.html"
+                <a href="/index.html"
                   ><img
                     src="https://drive.google.com/uc?id=1I0w85Q0wYywTq-7BcG-nMlgc4BXBr652"
                     alt="Optiminastic Media"
-                    width="100px"
                 /></a>
               </div>
               <!-- logo mobile end -->
@@ -163,19 +170,19 @@
               <div class="mobile_nav">
                 <ul id="menu-main-menu" class="mobile_mainmenu">
                   <li>
-                    <a href="index.html">Home</a>
+                    <a href="/index.html">Home</a>
                   </li>
                   <li>
-                    <a href="prizes.html">Cash Prizes</a>
+                    <a href="/prizes.html">Cash Prizes</a>
                   </li>
                   <li>
-                    <a href="gallery.html">Gallery</a>
+                    <a href="/gallery.html">Gallery</a>
                   </li>
                   <!-- <li>
-                    <a href="participate.html">Participate</a>
-                  </li> -->
-                  <!-- <li>
-                    <a href="gallery.html">Vote</a>
+                    <a href="/participate.html">Participate</a>
+                  </li>
+                  <li>
+                    <a href="/gallery.html">Vote</a>
                   </li> -->
                 </ul>
               </div>
@@ -185,53 +192,60 @@
         </div>
       </header>
 
-      <div id="content" class="site-content">
+      <div id="content" class="site-content m-t100">
         <section class="user-container">
           <div class="container">
             <div class="image-wrapper">
-              <img src="/images/Web-Banner1.jpg" alt="" />
-              <span id="display-name" class="title-default image-caption"
-                >Vishwakarma</span
-              >
+              <img id="display-image" alt="" />
+              <span
+                id="display-name"
+                class="title-default image-caption"
+              ></span>
             </div>
             <div class="mt-2">
               <div
                 class="d-flex align-items-center gap-3 justify-content-center"
               >
-                <!-- <a
+                <button
                   id="user-vote-btn"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
-                  data-bs-post-id="${post.id}"
+                  data-bs-post-id=""
                   class="octf-btn octf-btn-primary octf-btn-icon"
-                  >Vote <i class="fa-solid fa-thumbs-up"></i
-                ></a> -->
+                >
+                  Vote <i class="fa-solid fa-thumbs-up"></i>
+                </button>
                 <span
                   id="vote-count"
                   class="title-default"
                   style="font-size: 20px; font-weight: 400"
-                  >69K</span
-                >
+                ></span>
               </div>
               <div class="title-default mt-4">
                 <div class="row">
                   <div class="col-md-6 m-block col-sm-12">
                     Name:
-                    <span id="user-name">Cat++</span>
+                    <span id="user-name"></span>
                   </div>
                   <div class="col-md-6 m-block col-sm-12">
                     Category:
-                    <span id="user-category">Household</span>
+                    <span id="user-category"></span>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6 m-block col-sm-12">
                     City:
-                    <span id="user-city">Mumbai+</span>
+                    <span id="user-city"></span>
                   </div>
-                  <div class="col-md-6 m-block col-sm-12">
+                  <div class="col-md-6 m-block col-sm-12" style="width: 250px">
                     Link:
-                    <span id="user-link">Lol</span>
+                    <span id="user-link"></span>
+                    <button
+                      class="btn btn-secondary my-3"
+                      onclick="navigator.clipboard.writeText(document.getElementById('user-link').innerText)"
+                    >
+                      copy
+                    </button>
                   </div>
                 </div>
               </div>
@@ -250,7 +264,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Please fill details for voting
+                Votings Are Closed Now!
               </h5>
               <button
                 type="button"
@@ -259,88 +273,21 @@
                 aria-label="Close"
               ></button>
             </div>
-
-            <div class="container">
-              <!-- <section class="about-home bg-light"> -->
-              <!-- <div class="container"> -->
-              <div class="m-tb100 text-center">
-                <img src="${post.imageLink}" alt="Ganpati" />
-              </div>
-              <!-- </div> -->
-              <!-- </section> -->
-              <section>
-                <div>
-                  <div class="row text-center p-b10">
-                    <div class="wrapper-add-to-cart">
-                      <div class="add-to-cart-inner">
-                        <a
-                          id="${post.id}"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                          data-bs-post-id="${post.id}"
-                          class="button product_type_simple add_to_cart_button ajax_add_to_cart octf-btn octf-btn-primary octf-btn-icon"
-                          >Vote <i class="fa-solid fa-thumbs-up"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container justify-content-start">
-                  <div class="flex-row lol-margin justify-content-center">
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg1">
-                        <div class="content-box">
-                          <h5>Name: ${post.name}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg2">
-                        <div class="content-box">
-                          <h5>Category: ${post.category}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 sm-m-b40">
-                      <div class="service-box-s2 s-box service-box-s2-bg2">
-                        <div class="content-box">
-                          <h5>City: ${post.city}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box">
-                          <h5>Displayed Name: ${post.displayName}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box">
-                          <h5>Vote Count: ${post.votes}</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="service-box-s2 s-box service-box-s2-bg3">
-                        <div class="content-box" style="word-break: break-word">
-                          <h5>Post Link: ${window.location.href}</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div class="modal-body">
+            <!-- <div class="modal-body">
               <form>
                 <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label"
+                  <label
+                    for="recipient-name"
+                    style="font-weight: bold"
+                    class="col-form-label"
                     >Email</label
                   >
-                  <input type="email" class="form-control" id="modal-email" />
+                  <input
+                    type="email"
+                    style="font-weight: bold"
+                    class="form-control"
+                    id="modal-email"
+                  />
                 </div>
                 <div class="mb-3">
                   <label for="message-text" class="col-form-label"
@@ -348,24 +295,20 @@
                   >
                   <input
                     type="number"
-                    minlength="10"
+                    minlength="9"
                     maxlength="10"
                     class="form-control"
                     id="modal-phone"
                   />
                 </div>
+                <div class="text-center text-black" style="font-weight: bold">
+                  Vote and get a chance to earn a voucher worth ₹ 500/-
+                </div>
+
                 <div class="modal-status text-center">lol</div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn octf-btn octf-btn-third"
-                data-bs-dismiss="modal"
-                style="margin-right: 10px"
-              >
-                Close
-              </button>
+            </div> -->
+            <!-- <div class="modal-footer">
               <button
                 id="modal-vote-btn"
                 type="button"
@@ -373,7 +316,7 @@
               >
                 Vote
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -393,21 +336,6 @@
                     works…and what we know doesn’t work. With over 200 verified
                     factors in play.
                   </p> -->
-                  <div class="footer-social">
-                    <a
-                      class="footer-social-icon facebook"
-                      href="https://www.facebook.com/profile.php?id=100084975259552"
-                      target="_blank"
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-
-                    <a
-                      class="footer-social-icon instagram"
-                      href="https://instagram.com/trendsganesha?igshid=YmMyMTA2M2Y="
-                      target="_blank"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
                 </div>
               </div>
               <div class="col-lg-4 col-sm-6">
@@ -420,6 +348,21 @@
                         Moses Rd, Worli Circle, Mumbai - 400 018
                       </li>
                     </ul>
+                    <div class="footer-social">
+                      <a
+                        class="footer-social-icon facebook"
+                        href="https://www.facebook.com/profile.php?id=100084975259552"
+                        target="_blank"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+
+                      <a
+                        class="footer-social-icon instagram"
+                        href="https://instagram.com/trendsganesha?igshid=YmMyMTA2M2Y="
+                        target="_blank"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -442,7 +385,7 @@
                       >
                     </li>
                     <li>
-                      <a class="text-black" href="terms.html"
+                      <a class="text-black" href="/terms.html"
                         ><strong>Terms and Conditions</strong></a
                       >
                     </li>
@@ -468,24 +411,24 @@
       ><i class="flaticon-arrow-pointing-to-up"></i
     ></a>
     <!-- jQuery -->
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/slick.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/easypiechart.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/header-mobile.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/users.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/easypiechart.js"></script>
+    <script src="/js/particles.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/header-mobile.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/posts.js"></script>
     <script src="/js/votes.js"></script>
     <!-- <script src="js/royal_preloader.min.js"></script> -->
     <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
