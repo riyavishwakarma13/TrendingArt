@@ -155,7 +155,7 @@ WooCommerce styles override
 }
 .woocommerce ul.products li.product .price .woocommerce-Price-amount,
 .woocommerce-page ul.products li.product .price .woocommerce-Price-amount {
-  color: #fe4c1c;
+  color: #38004f;
 }
 .woocommerce ul.products li.product .price del {
   opacity: 0.5;
@@ -227,7 +227,7 @@ WooCommerce styles override
 .woocommerce ul.products li.product .add_to_cart_button.added:after,
 .woocommerce-page ul.products li.product .add_to_cart_button.added:after {
   background: #fff;
-  color: #fe4c1c;
+  color: #38004f;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -274,7 +274,7 @@ WooCommerce styles override
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.5px;
-  background-color: #fe4c1c;
+  background-color: #38004f;
   padding: 9px 10px;
   line-height: 1;
   border-radius: 3px;
@@ -634,7 +634,7 @@ WooCommerce styles override
   top: 10px;
   width: 5px;
   height: 5px;
-  background: #fe4c1c;
+  background: #38004f;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -695,7 +695,7 @@ WooCommerce styles override
 
 /* widget product */
 .woocommerce .woocommerce-Price-amount {
-  color: #fe4c1c;
+  color: #38004f;
   font-weight: 500;
 }
 .woocommerce ul.product_list_widget li {
@@ -976,7 +976,7 @@ WooCommerce styles override
   font-family: "Red Hat Display", sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
-  background-color: #fe4c1c;
+  background-color: #38004f;
   box-shadow: none;
   text-transform: uppercase;
 }
@@ -1050,7 +1050,7 @@ WooCommerce styles override
 .woocommerce a.button,
 .woocommerce input.button,
 .woocommerce button.button.alt.disabled {
-  background-color: #fe4c1c;
+  background-color: #38004f;
   box-shadow: 8px 8px 18px 0px rgba(254, 76, 28, 0.3);
   -webkit-box-shadow: 8px 8px 18px 0px rgba(254, 76, 28, 0.3);
   -moz-box-shadow: 8px 8px 18px 0px rgba(254, 76, 28, 0.3);
@@ -1063,7 +1063,7 @@ WooCommerce styles override
 .woocommerce a.button:hover,
 .woocommerce input.button:hover,
 .woocommerce button.button.alt.disabled:hover {
-  background-color: #fe4c1c;
+  background-color: #38004f;
 }
 
 .woocommerce button.button {
@@ -1101,7 +1101,7 @@ WooCommerce styles override
 
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-  color: #fe4c1c;
+  color: #38004f;
 }
 
 .woocommerce div.product .entry-summary p.price,
