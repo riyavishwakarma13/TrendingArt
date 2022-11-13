@@ -32,7 +32,7 @@ const renderHtml = (posts) => {
             <div class="team-info text-uppercase">
               <h4>${post.displayName}</h4>
               <div class= "text-center text-muted">
-              <span>${post.city}, ${post.category}</span>
+              <span>${post.country}</span>
               
               </div>
             </div>

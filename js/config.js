@@ -1,2 +1,2 @@
-const apiUrl = "https://ganpati-campaign.herokuapp.com/api";
+const apiUrl = "http://localhost:3000/api";
 // Hello world

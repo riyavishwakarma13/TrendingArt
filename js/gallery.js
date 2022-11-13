@@ -1,11 +1,9 @@
 const btn = document.getElementById("submit-btn");
 const loadMoreBtn = document.getElementById("load-more");
-const cityElem = document.getElementById("city");
-const categoryElem = document.getElementById("category");
+const countryElem = document.getElementById("country");
 
 let globalStart = 0;
-let globalCity = "";
-let globalCategory = "";
+let globalCountry = "";
 let globalName = "";
 
 const renderPosts = (posts) => {
@@ -43,32 +41,16 @@ const renderPosts = (posts) => {
   return str;
 };
 
-cityElem.addEventListener("change", (e) => {
-  const city = cityElem.options[cityElem.selectedIndex].value;
+countryElem.addEventListener("change", (e) => {
+  const country = countryElem.options[countryElem.selectedIndex].value;
   const params = new URLSearchParams(window.location.search);
 
   params.set("start", 0);
 
-  if (city) {
-    params.set("city", city);
+  if (country) {
+    params.set("country", country);
   } else {
-    params.delete("city");
-    params.delete("name");
-  }
-
-  window.location.search = params;
-});
-
-categoryElem.addEventListener("change", (e) => {
-  const category = categoryElem.options[categoryElem.selectedIndex].value;
-  const params = new URLSearchParams(window.location.search);
-
-  params.set("start", 0);
-
-  if (category) {
-    params.set("category", category);
-  } else {
-    params.delete("category");
+    params.delete("country");
     params.delete("name");
   }
 
@@ -79,17 +61,13 @@ btn.addEventListener("click", async (e) => {
   e.preventDefault();
   const search = document.getElementById("search");
   const start = 0;
-  const city = cityElem.options[cityElem.selectedIndex].value;
-  const category = categoryElem.options[categoryElem.selectedIndex].value;
+  const country = countryElem.options[countryElem.selectedIndex].value;
   const name = search.value;
 
   const params = new URLSearchParams();
   params.append("start", start);
-  if (city) {
-    params.append("city", city);
-  }
-  if (category) {
-    params.append("category", category);
+  if (country) {
+    params.append("country", country);
   }
 
   if (name) {
@@ -99,9 +77,8 @@ btn.addEventListener("click", async (e) => {
   const posts = await fetchPosts(params);
   document.querySelector(".products").innerHTML = renderPosts(posts);
   window.location.search = params;
-  globalCity = city;
+  globalCountry = country;
   globalName = name;
-  globalCategory = category;
 });
 
 const fetchPosts = async (params) => {
@@ -123,21 +100,15 @@ window.addEventListener("load", async (e) => {
   const posts = await fetchPosts(params);
 
   document.querySelector(".products").innerHTML = renderPosts(posts);
-  globalCity = params.get("city");
+  globalCountry = params.get("country");
   globalName = params.get("name");
-  globalCategory = params.get("category");
-  const cityElem = document.getElementById("city");
-  const categoryElem = document.getElementById("category");
+  const countryElem = document.getElementById("country");
 
-  const categoryIndex = Array.from(categoryElem.options).findIndex(
-    (elem) => globalCategory === elem.value
-  );
-  const cityIndex = Array.from(cityElem.options).findIndex(
-    (elem) => globalCity === elem.value
+  const countryIndex = Array.from(countryElem.options).findIndex(
+    (elem) => globalCountry === elem.value
   );
 
-  if (categoryIndex >= 0) categoryElem.selectedIndex = categoryIndex;
-  if (cityIndex >= 0) cityElem.selectedIndex = cityIndex;
+  if (countryIndex >= 0) countryElem.selectedIndex = countryIndex;
 });
 
 loadMoreBtn.addEventListener("click", async (e) => {
@@ -152,11 +123,8 @@ loadMoreBtn.addEventListener("click", async (e) => {
 
   params.append("start", globalStart);
 
-  if (globalCity) {
-    params.append("city", globalCity);
-  }
-  if (globalCategory) {
-    params.append("category", globalCategory);
+  if (globalCountry) {
+    params.append("country", globalCountry);
   }
 
   if (globalName) {
