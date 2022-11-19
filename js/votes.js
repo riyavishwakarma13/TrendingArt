@@ -69,7 +69,7 @@ const vote = async (postId, email, phone, token) => {
   if (res.ok) {
     return {
       error: false,
-      message: `Congratulations! You have won a Rs 500 discount coupon from Trends. Please visit your nearest Trends store to collect your coupon`,
+      message: `Congratulations! You have successfully voted`,
     };
   } else {
     const errRes = await res.json();
@@ -113,12 +113,12 @@ const handleVoteButtonClicked = async (e) => {
     return;
   }
 
-  grecaptcha.ready(function () {
-    grecaptcha
-      .execute("6Ldw7NkhAAAAANEgcweMfeMuwu1h8DxxIeAfFXq_", { action: "submit" })
-      .then(async (token) => {
-        e.target.disabled = true;
-        const { error, message } = await vote(postId, email, phone, token);
+  // grecaptcha.ready(function () {
+  //   grecaptcha
+  //     .execute("6Ldw7NkhAAAAANEgcweMfeMuwu1h8DxxIeAfFXq_", { action: "submit" })
+  //     .then(async (token) => {
+  //       e.target.disabled = true;
+        const { error, message } = await vote(postId, email, phone);
         e.target.disabled = false;
         if (error) {
           statusDiv.classList.add("modal-error");
@@ -127,8 +127,8 @@ const handleVoteButtonClicked = async (e) => {
         } else {
           statusDiv.innerHTML = message;
         }
-      });
-  });
+      // });
+  // });
 };
 
 const voteModal = document.getElementById("exampleModal");
